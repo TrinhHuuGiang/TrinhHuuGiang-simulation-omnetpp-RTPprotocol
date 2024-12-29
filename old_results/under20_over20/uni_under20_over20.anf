@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<analysis version="2">
+    <inputs>
+        <input pattern="/RTP_N11/old_results/under20_over20/uni_under20_over20.vec"/>
+        <input pattern="/RTP_N11/old_results/under20_over20/uni_under20_over20.sca"/>
+    </inputs>
+    <charts/>
+</analysis>

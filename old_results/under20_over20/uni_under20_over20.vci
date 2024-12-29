@@ -1,0 +1,627 @@
+file 1461337 1735461978                                         
+version 3
+run General-0-20241229-13:17:26-2348
+attr configname General
+attr datetime 20241229-13:17:26
+attr datetimef 20241229-131726
+attr experiment General
+attr inifile mul_simulation.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network multicast_Network
+attr processid 2348
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config network multicast_Network
+config total-stack 28MiB
+config **.Host_*.forwarding false
+config **.Host_*.profileName "\"inet.transportlayer.rtp.RtpAvProfile\""
+config **.Host_*.portNumber 5004
+config **.Host_*.bandwidth 8000
+config **.Host_*.fileName "\"../data/mul_net_frame_increase.mpg.gdf\""
+config **.payloadType 32
+config **.autoOutputFileNames true
+config **.sessionEnterDelay 10s
+config **.transmissionStartDelay 10s
+config **.transmissionStopDelay 40s
+config **.sessionLeaveDelay 10s
+config **.Host_*.**.commonName "\"???\""
+
+vector 0 multicast_Network.Host_0.ppp[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 1 multicast_Network.Host_0.ppp[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 2 multicast_Network.Host_0.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 3 multicast_Network.Host_0.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 4 multicast_Network.Host_0.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 5 multicast_Network.Host_0.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 6 multicast_Network.Host_1.ppp[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 7 multicast_Network.Host_1.ppp[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 8 multicast_Network.Host_1.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 9 multicast_Network.Host_1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 10 multicast_Network.Host_1.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 11 multicast_Network.Host_1.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 12 multicast_Network.router.ppp[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 13 multicast_Network.router.ppp[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 14 multicast_Network.router.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 15 multicast_Network.router.ppp[1].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 16 multicast_Network.router.ppp[1].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 17 multicast_Network.router.ppp[1].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 18 multicast_Network.Host_0.ppp[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 19 multicast_Network.Host_0.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 20 multicast_Network.Host_0.ppp[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 21 multicast_Network.Host_0.ppp[0].ppp rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 22 multicast_Network.Host_0.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 23 multicast_Network.Host_1.ppp[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 24 multicast_Network.Host_1.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 25 multicast_Network.Host_1.ppp[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 26 multicast_Network.Host_1.ppp[0].ppp rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 27 multicast_Network.Host_1.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 28 multicast_Network.router.ppp[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 29 multicast_Network.router.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 30 multicast_Network.router.ppp[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 31 multicast_Network.router.ppp[0].ppp rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 32 multicast_Network.router.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 33 multicast_Network.router.ppp[1].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 34 multicast_Network.router.ppp[1].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 35 multicast_Network.router.ppp[1].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 36 multicast_Network.router.ppp[1].ppp rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 37 multicast_Network.router.ppp[1].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 38 multicast_Network.router.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 39 multicast_Network.router.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 40 multicast_Network.Host_1.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 41 multicast_Network.Host_1.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 42 multicast_Network.router.ppp[1].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 43 multicast_Network.router.ppp[1].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 44 multicast_Network.Host_0.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 45 multicast_Network.Host_0.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 46 multicast_Network.Host_1.ppp[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 47 multicast_Network.Host_1.ppp[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 48 multicast_Network.Host_0.ppp[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 49 multicast_Network.Host_0.ppp[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 50 multicast_Network.Host_1.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 51 multicast_Network.Host_1.lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 52 multicast_Network.Host_1.lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 53 multicast_Network.Host_1.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 54 multicast_Network.Host_1.rtcp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 55 multicast_Network.router.ppp[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 56 multicast_Network.router.ppp[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 57 multicast_Network.Host_0.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 58 multicast_Network.Host_0.rtcp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 59 multicast_Network.Host_0.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 60 multicast_Network.Host_0.lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 61 multicast_Network.Host_0.lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 62 multicast_Network.router.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, packetBytes"
+vector 63 multicast_Network.router.ppp[1].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 64 multicast_Network.router.ppp[1].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 65 multicast_Network.Host_1.rtp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 66 multicast_Network.Host_0.rtp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 67 multicast_Network.router.ppp[1].ppp packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, packetBytes"
+vector 68 multicast_Network.Host_0.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, packetBytes"
+vector 69 multicast_Network.Host_1.ppp[0].ppp packetDropIncorrectlyReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, packetBytes"
+0	18422 21620 0 29854 0 55.37223730383 845 0 1 5 5
+1	40042 21630 0 29854 0 55.37223730383 845 0 768 3648 2691072
+2	61672 42897 0 29865 0 55.40564530383 1671 0 1 835 835
+3	104569 25915 0 29856 0 55.37223730383 939 0 938 440391 275537969
+4	130484 9 0 0 0 0 1 0 0 0 0
+5	130493 9 0 0 0 0 1 0 0 0 0
+6	130502 22544 0 29840 0 55.369942928506 849 0 1 6 6
+7	153046 22558 0 29840 0 55.369942928506 849 0 24352 27488 595186688
+8	175604 44695 0 29863 0 55.403350928506 1677 0 1 838 838
+9	220299 27474 0 29842 0 55.369942928506 965 0 964 465130 299078590
+10	247773 10 0 0 0 0 1 0 0 0 0
+11	247783 10 0 0 0 0 1 0 0 0 0
+12	247793 5943 0 29400 0 54.84354355704 231 0 1 5 5
+13	253736 5953 0 29400 0 54.84354355704 231 0 768 3296 2409472
+14	259689 11569 0 29431 0 54.87695155704 443 0 1 221 221
+15	271258 6837 0 29832 0 55.365742654321 255 0 1 3 3
+16	278095 6843 0 29832 0 55.365742654321 255 0 768 1760 1229824
+17	284938 13460 0 29861 0 55.399150654321 495 0 1 247 247
+18	298398 25367 7 29854 0 55.37223730383 835 256 33352 14190312 318756990272
+19	323765 22340 7 29854 0 55.37223730383 835 0 0.027392456484 0.080010776772 0.0016310499795728
+20	346105 25362 7 29854 0 55.37223730383 835 256 33352 14190312 318756990272
+21	371467 24577 7 29854 0 55.37223730383 835 32 4169 1773789 4980577973
+22	396044 24585 7 29854 0 55.37223730383 835 39 4176 1779634 5005451934
+23	420629 26275 8 29840 0 55.369942928506 838 256 33352 14290016 322093641216
+24	446904 23254 8 29840 0 55.369942928506 838 0 0.023978676695 0.037775590719 0.00063622273036401
+25	470158 26275 8 29840 0 55.369942928506 838 256 33352 14290016 322093641216
+26	496433 25487 8 29840 0 55.369942928506 838 32 4169 1786252 5032713144
+27	521920 25494 8 29840 0 55.369942928506 838 39 4176 1792118 5057761734
+28	547414 6492 9 29400 0 54.84354355704 221 224 33352 1903352 28632719808
+29	553906 5815 9 29400 0 54.84354355704 221 0 0.028584 0.057547635623 0.0011769885853838
+30	559721 6498 9 29400 0 54.84354355704 221 224 33352 1903352 28632719808
+31	566219 6295 9 29400 0 54.84354355704 221 28 4169 237919 447386247
+32	572514 6301 9 29400 0 54.84354355704 221 35 4176 239466 450727942
+33	578815 7539 10 29832 0 55.365742654321 247 224 33352 2412208 39493070848
+34	586354 6741 10 29832 0 55.365742654321 247 0 0.026584 0.03748 0.000818827456
+35	593095 7546 10 29832 0 55.365742654321 247 224 33352 2412208 39493070848
+36	600641 7318 10 29832 0 55.365742654321 247 28 4169 301526 617079232
+37	607959 7326 10 29832 0 55.365742654321 247 35 4176 303255 621312699
+38	615285 7356 17 29830 0.000409350491 55.365742654321 247 39 4176 303263 621313291
+39	622641 7348 17 29830 0.000409350491 55.365742654321 247 32 4169 301534 617079712
+40	629989 3858 20 29596 0.000497994335 55.079336648656 132 35 4176 94140 126032084
+41	633847 3850 20 29596 0.000497994335 55.079336648656 132 28 4169 93216 124720592
+42	637697 6332 23 29398 0.000504628534 54.84354355704 221 39 4176 239474 450728534
+43	644029 6326 23 29398 0.000504628534 54.84354355704 221 32 4169 237927 447386727
+44	650355 3160 26 28655 0.000506239039 53.924001796079 109 35 2801 60004 60807880
+45	653515 3154 26 28655 0.000506239039 53.924001796079 109 28 2794 59241 59973165
+46	656669 10152 39 29806 0.1 55.3 553 0 1000560 142233120 83308369254400
+47	666821 10152 39 29806 0.1 55.3 553 0 1000560 142233120 83304642304000
+48	676973 10221 46 29820 0.1 55.3 553 0 1000560 141236080 82422861932800
+49	687194 10221 46 29820 0.1 55.3 553 0 1000560 141236080 82422861932800
+50	697415 25454 71 29870 12.449942928506 55.409942928506 836 32 4149 1773605 4978812033
+51	722869 25423 75 29839 12.449942928506 55.369942928506 835 52 4169 1786156 5032710072
+52	748292 25423 75 29839 12.449942928506 55.369942928506 835 52 4169 1786156 5032710072
+53	773715 29195 81 29842 12.449942928506 55.369942928506 964 32 4149 1860004 5082642312
+54	802910 595 84 28647 12.449942928506 53.898372251811 21 24 68 1204 75536
+55	803505 9104 90 29400 0.1 54.8 548 0 467040 18700000 3557407603200
+56	812609 9104 90 29400 0.1 54.8 548 0 467040 18700000 3557407603200
+57	821713 27593 94 29856 12.451273796079 55.37223730383 938 32 4149 1814086 4967606834
+58	849306 589 95 28658 12.451273796079 53.924001796079 21 24 68 1160 71488
+59	849895 24516 98 29850 12.57223730383 55.37223730383 832 32 4149 1757053 4909959981
+60	874411 24517 102 29853 12.57223730383 55.37223730383 832 52 4169 1773693 4980574901
+61	898928 24517 102 29853 12.57223730383 55.37223730383 832 52 4169 1773693 4980574901
+62	923445 18070 115 29866 12.572806654321 55.405742654321 588 59 4176 1476371 4384138643
+63	941515 9406 144 29832 0.1 55.3 553 0 427040 23788560 4967763296000
+64	950921 9406 144 29832 0.1 55.3 553 0 427040 23788560 4967763296000
+65	960327 28600 183 29843 22.449942928506 55.369942928506 943 141 4141 1851088 5052868408
+66	988927 27004 195 29857 22.453145796079 55.37223730383 917 141 4141 1805422 4938570002
+67	1015931 18350 240 29864 22.53154355704 55.40354355704 617 103 4176 1552644 4607033200
+68	1034281 3383 839 29432 23.013145796079 54.877145796079 112 176 4176 179462 389920062
+69	1037664 3498 1189 29862 23.295336648656 55.399336648656 115 176 4176 209115 495280615
+0	1041162 11911 29888 40972 55.41223730383 65.487079642947 458 0 3 271 463
+1	1053073 12554 29888 40972 55.41223730383 65.487079642947 458 0 45728 3126096 116257523584
+2	1065627 15966 29888 40976 55.41223730383 65.487903642947 614 0 1 307 307
+3	1081593 10825 29890 41000 55.41223730383 65.642787594935 373 939 1311 419625 476402687
+6	1092418 12392 29874 40989 55.409942928506 65.640752727362 459 0 3 285 487
+7	1104810 13070 29874 40989 55.409942928506 65.640752727362 459 0 45728 3432616 127678624960
+8	1117880 16416 29874 40993 55.409942928506 65.641576727362 608 0 1 304 304
+9	1134296 11274 29876 40991 55.409942928506 65.640752727362 377 965 1341 434681 505652381
+12	1145570 2809 30222 40996 55.84454355704 65.641769355896 104 0 1 3 3
+13	1148379 2818 30222 40996 55.84454355704 65.641769355896 104 0 3024 7072 17337728
+14	1151197 5456 30222 40997 55.84454355704 65.642593355896 202 0 1 101 101
+15	1156653 2912 29996 40979 55.565742654321 65.488000993438 104 0 1 4 4
+16	1159565 2923 29996 40979 55.565742654321 65.488000993438 104 0 5024 15840 76311552
+17	1162488 5600 29996 40980 55.565742654321 65.488824993438 200 0 1 100 100
+18	1168088 9389 29888 40972 55.41223730383 65.487079642947 307 576 35680 6716120 225722402240
+19	1177477 9348 29888 40972 55.41223730383 65.487079642947 307 0 0.05532 4.983385682367 0.18435460499506
+20	1186825 9387 29888 40972 55.41223730383 65.487079642947 307 576 35680 6716120 225722402240
+21	1196212 9080 29888 40972 55.41223730383 65.487079642947 307 72 4460 839515 3526912535
+22	1205292 9082 29888 40972 55.41223730383 65.487079642947 307 79 4467 841664 3538680788
+23	1214374 9596 29874 40989 55.409942928506 65.640752727362 304 768 35680 6616256 222385592576
+24	1223970 9595 29874 40989 55.409942928506 65.640752727362 304 0 0.05532 4.984824648636 0.18423797088774
+25	1233565 9597 29874 40989 55.409942928506 65.640752727362 304 768 35680 6616256 222385592576
+26	1243162 9293 29874 40989 55.409942928506 65.640752727362 304 96 4460 827032 3474774884
+27	1252455 9296 29874 40989 55.409942928506 65.640752727362 304 103 4467 829160 3486368228
+28	1261751 3036 30222 40996 55.84454355704 65.641769355896 101 768 35680 547592 10836590528
+29	1264787 2749 30222 40996 55.84454355704 65.641769355896 101 0 0.033656 0.099968 0.003331867008
+30	1267536 3036 30222 40996 55.84454355704 65.641769355896 101 768 35680 547592 10836590528
+31	1270572 2935 30222 40996 55.84454355704 65.641769355896 101 96 4460 68449 169321727
+32	1273507 2938 30222 40996 55.84454355704 65.641769355896 101 103 4467 69156 170284962
+33	1276445 3103 29996 40979 55.565742654321 65.488000993438 100 576 35680 460392 8158082752
+34	1279548 2828 29996 40979 55.565742654321 65.488000993438 100 0 0.030656 0.094224 0.002824460544
+35	1282376 3103 29996 40979 55.565742654321 65.488000993438 100 576 35680 460392 8158082752
+36	1285479 3003 29996 40979 55.565742654321 65.488000993438 100 72 4460 57549 127470043
+37	1288482 3005 29996 40979 55.565742654321 65.488000993438 100 79 4467 58249 128280629
+38	1291487 3005 29994 40977 55.565742654321 65.488000993438 100 79 4467 58249 128280629
+39	1294492 3003 29994 40977 55.565742654321 65.488000993438 100 72 4460 57549 127470043
+40	1297495 2189 30404 40981 56.048192648656 65.489010987773 73 79 635 22235 8865709
+41	1299684 2187 30404 40981 56.048192648656 65.489010987773 73 72 628 21724 8557996
+42	1301871 2938 30220 40994 55.84454355704 65.641769355896 101 103 4467 69156 170284962
+43	1304809 2935 30220 40994 55.84454355704 65.641769355896 101 96 4460 68449 169321727
+44	1307744 1980 31608 40998 57.488225796079 65.642787594935 66 103 635 21971 9246993
+45	1309724 1978 31608 40998 57.488225796079 65.642787594935 66 96 628 21509 8942633
+46	1311702 2126 29874 40989 55.4 65.6 103 0 1221120 66821920 65018167936000
+47	1313828 2126 29874 40989 55.4 65.6 103 0 1221120 66821920 64910681318400
+48	1315954 2098 29888 40972 55.4 65.4 101 0 1221120 67820560 66075710790400
+49	1318052 2097 29888 40972 55.4 65.4 101 0 1221120 67820560 65716640608000
+50	1320149 9261 29902 40986 55.449942928506 65.640752727362 303 76 4440 816803 3424601003
+51	1329410 9292 29873 40988 55.409942928506 65.640752727362 304 96 4460 827032 3474774884
+52	1338702 9292 29873 40988 55.409942928506 65.640752727362 304 96 4460 827032 3474774884
+53	1347994 11479 29876 40991 55.409942928506 65.640752727362 377 52 4440 841216 3449533440
+54	1359473 173 30407 40992 56.048192648656 65.640752727362 6 44 68 384 25056
+55	1359646 2050 30222 40996 54.9 65.6 108 0 417280 5801760 1417554188800
+56	1361696 2050 30222 40996 54.9 65.6 108 0 417280 5801760 1403515724800
+57	1363746 11060 29890 41000 55.41223730383 65.642787594935 373 52 4440 853564 3501563408
+58	1374806 145 30394 41001 56.020186816755 65.642787594935 5 44 68 316 20432
+59	1374951 9082 29884 40969 55.41223730383 65.487079642947 307 52 4440 833375 3493454735
+60	1384033 9082 29887 40971 55.41223730383 65.487079642947 307 72 4460 839515 3526912535
+61	1393115 9082 29887 40971 55.41223730383 65.487079642947 307 72 4460 839515 3526912535
+62	1402197 6383 29898 40967 55.445742654321 62.592734654321 207 135 4467 783415 3410400159
+63	1408580 1910 29996 40979 55.4 65.4 101 0 457280 4929760 1198311142400
+64	1410490 1914 29996 40979 55.4 65.4 101 0 457280 4929760 1162459878400
+65	1412404 11306 29877 40771 55.409942928506 62.409942928506 371 100 4432 837816 3436073056
+66	1423710 10915 29891 40934 55.41223730383 62.53223730383 368 100 4432 850264 3487909824
+67	1434625 6055 29896 40866 55.44354355704 62.46545555704 203 135 4467 760004 3316083266
+68	1440680 1058 30254 40878 55.879145796079 62.475809796079 35 103 4467 47185 161037969
+69	1441738 816 30026 40952 55.599336648656 62.557184648656 27 135 4467 36014 119414920
+0	1442554 54 41006 41052 70.410151165625 74.066348294038 2 0 0 0 0
+1	1442608 54 41006 41052 70.410151165625 74.066348294038 2 0 0 0 0
+2	1442662 108 41006 41056 70.410151165625 74.066884294038 4 0 1 2 2
+3	1442770 119 41008 41075 70.410151165625 76.996781619463 4 1312 1315 5254 6901134
+6	1442889 53 41023 41064 71.127957513007 76.99532275189 2 0 0 0 0
+7	1442942 53 41023 41064 71.127957513007 76.99532275189 2 0 0 0 0
+8	1442995 106 41023 41068 71.127957513007 76.99585875189 4 0 1 2 2
+9	1443101 89 41017 41066 70.412082510451 76.99532275189 3 1342 1344 4029 5410949
+12	1443190 56 41030 41071 71.128974141541 76.996051380424 2 0 0 0 0
+13	1443246 56 41030 41071 71.128974141541 76.996051380424 2 0 0 0 0
+14	1443302 112 41030 41072 71.128974141541 76.996587380424 4 0 1 2 2
+15	1443414 28 41013 41013 70.411072516116 70.411072516116 1 0 0 0 0
+16	1443442 28 41013 41013 70.411072516116 70.411072516116 1 0 0 0 0
+17	1443470 56 41013 41014 70.411072516116 70.411896516116 2 0 1 1 1
+18	1443526 60 41006 41052 70.410151165625 74.066348294038 2 480 768 1248 820224
+19	1443586 56 41006 41052 70.410151165625 74.066348294038 2 0 0 0 0
+20	1443642 60 41006 41052 70.410151165625 74.066348294038 2 480 768 1248 820224
+21	1443702 58 41006 41052 70.410151165625 74.066348294038 2 60 96 156 12816
+22	1443760 59 41006 41052 70.410151165625 74.066348294038 2 67 103 170 15098
+23	1443819 59 41023 41064 71.127957513007 76.99532275189 2 480 768 1248 820224
+24	1443878 55 41023 41064 71.127957513007 76.99532275189 2 0 0 0 0
+25	1443933 59 41023 41064 71.127957513007 76.99532275189 2 480 768 1248 820224
+26	1443992 57 41023 41064 71.127957513007 76.99532275189 2 60 96 156 12816
+27	1444049 58 41023 41064 71.127957513007 76.99532275189 2 67 103 170 15098
+28	1444107 60 41030 41071 71.128974141541 76.996051380424 2 480 768 1248 820224
+29	1444167 56 41030 41071 71.128974141541 76.996051380424 2 0 0 0 0
+30	1444223 60 41030 41071 71.128974141541 76.996051380424 2 480 768 1248 820224
+31	1444283 58 41030 41071 71.128974141541 76.996051380424 2 60 96 156 12816
+32	1444341 59 41030 41071 71.128974141541 76.996051380424 2 67 103 170 15098
+33	1444400 30 41013 41013 70.411072516116 70.411072516116 1 768 768 768 589824
+34	1444430 28 41013 41013 70.411072516116 70.411072516116 1 0 0 0 0
+35	1444458 30 41013 41013 70.411072516116 70.411072516116 1 768 768 768 589824
+36	1444488 29 41013 41013 70.411072516116 70.411072516116 1 96 96 96 9216
+37	1444517 30 41013 41013 70.411072516116 70.411072516116 1 103 103 103 10609
+38	1444547 30 41011 41011 70.411072516116 70.411072516116 1 103 103 103 10609
+39	1444577 29 41011 41011 70.411072516116 70.411072516116 1 96 96 96 9216
+40	1444606 30 41015 41015 70.412082510451 70.412082510451 1 103 103 103 10609
+41	1444636 29 41015 41015 70.412082510451 70.412082510451 1 96 96 96 9216
+42	1444665 59 41028 41069 71.128974141541 76.996051380424 2 67 103 170 15098
+43	1444724 58 41028 41069 71.128974141541 76.996051380424 2 60 96 156 12816
+44	1444782 58 41032 41073 71.12999238058 76.996781619463 2 67 103 170 15098
+45	1444840 57 41032 41073 71.12999238058 76.996781619463 2 60 96 156 12816
+46	1444897 1905 41023 41064 65.7 76.9 113 0 7680 15360 117964800
+47	1446802 1905 41023 41064 65.7 76.9 113 0 7680 15360 117964800
+48	1448707 1450 41006 41052 65.5 74 86 0 7680 15360 117964800
+49	1450157 1450 41006 41052 65.5 74 86 0 7680 15360 117964800
+50	1451607 57 41020 41059 71.127957513007 76.99532275189 2 40 76 116 7376
+51	1451664 57 41022 41063 71.127957513007 76.99532275189 2 60 96 156 12816
+52	1451721 57 41022 41063 71.127957513007 76.99532275189 2 60 96 156 12816
+53	1451778 86 41017 41066 70.412082510451 76.99532275189 3 40 76 192 13152
+54	1451864 86 41018 41067 70.412082510451 76.99532275189 3 32 68 168 10272
+55	1451950 1905 41030 41071 65.7 76.9 113 0 7680 15360 117964800
+56	1453855 1905 41030 41071 65.7 76.9 113 0 7680 15360 117964800
+57	1455760 115 41008 41075 70.410151165625 76.996781619463 4 40 76 232 14752
+58	1455875 115 41009 41076 70.410151165625 76.996781619463 4 32 68 200 11296
+59	1455990 58 41003 41047 70.410151165625 74.066348294038 2 40 76 116 7376
+60	1456048 58 41005 41051 70.410151165625 74.066348294038 2 60 96 156 12816
+61	1456106 58 41005 41051 70.410151165625 74.066348294038 2 60 96 156 12816
+62	1456164 29 41057 41057 74.066981644529 74.066981644529 1 67 67 67 4489
+63	1456193 843 41013 41013 65.5 70.4 50 0 7680 7680 58982400
+64	1457036 843 41013 41013 65.5 70.4 50 0 7680 7680 58982400
+46	1457879 42 41076 41076 76.996781619463 76.996781619463 1 4959.6194263262 4959.6194263262 4959.6194263262 24597824.853992
+47	1457921 42 41076 41076 76.996781619463 76.996781619463 1 4959.6194263262 4959.6194263262 4959.6194263262 24597824.853992
+48	1457963 520 41076 41076 74.1 76.996781619463 30 0 4800 4800 23040000
+49	1458483 520 41076 41076 74.1 76.996781619463 30 0 4800 4800 23040000
+55	1459003 42 41076 41076 76.996781619463 76.996781619463 1 4959.6194263262 4959.6194263262 4959.6194263262 24597824.853992
+56	1459045 42 41076 41076 76.996781619463 76.996781619463 1 4959.6194263262 4959.6194263262 4959.6194263262 24597824.853992
+63	1459087 1124 41076 41076 70.5 76.996781619463 66 0 7680 7680 58982400
+64	1460211 1124 41076 41076 70.5 76.996781619463 66 0 7680 7680 58982400
+

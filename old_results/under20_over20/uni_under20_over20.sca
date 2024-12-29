@@ -1,0 +1,3171 @@
+version 3
+run General-0-20241229-13:17:26-2348
+attr configname General
+attr datetime 20241229-13:17:26
+attr datetimef 20241229-131726
+attr experiment General
+attr inifile mul_simulation.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network multicast_Network
+attr processid 2348
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../../inet4.5/images
+config network multicast_Network
+config total-stack 28MiB
+config **.Host_*.forwarding false
+config **.Host_*.profileName "\"inet.transportlayer.rtp.RtpAvProfile\""
+config **.Host_*.portNumber 5004
+config **.Host_*.bandwidth 8000
+config **.Host_*.fileName "\"../data/mul_net_frame_increase.mpg.gdf\""
+config **.payloadType 32
+config **.autoOutputFileNames true
+config **.sessionEnterDelay 10s
+config **.transmissionStartDelay 10s
+config **.transmissionStopDelay 40s
+config **.sessionLeaveDelay 10s
+config **.Host_*.**.commonName "\"???\""
+
+par multicast_Network.Host_0.pppg$o[0].channel typename "\"src.multicast_Network.ethernet\""
+par multicast_Network.Host_0.pppg$o[0].channel disabled false
+attr mutable ""
+par multicast_Network.Host_0.pppg$o[0].channel delay 9.73505e-05s
+attr mutable ""
+attr unit s
+par multicast_Network.Host_0.pppg$o[0].channel datarate 1e+06bps
+attr mutable ""
+attr unit bps
+par multicast_Network.Host_0.pppg$o[0].channel ber 0.0001
+attr mutable ""
+par multicast_Network.Host_0.pppg$o[0].channel per 0
+attr mutable ""
+par multicast_Network.router.pppg$o[0].channel typename "\"src.multicast_Network.ethernet\""
+par multicast_Network.router.pppg$o[0].channel disabled false
+attr mutable ""
+par multicast_Network.router.pppg$o[0].channel delay 0.000194239s
+attr mutable ""
+attr unit s
+par multicast_Network.router.pppg$o[0].channel datarate 1e+06bps
+attr mutable ""
+attr unit bps
+par multicast_Network.router.pppg$o[0].channel ber 0.0001
+attr mutable ""
+par multicast_Network.router.pppg$o[0].channel per 0
+attr mutable ""
+par multicast_Network.Host_1.pppg$o[0].channel typename "\"src.multicast_Network.ethernet\""
+par multicast_Network.Host_1.pppg$o[0].channel disabled false
+attr mutable ""
+par multicast_Network.Host_1.pppg$o[0].channel delay 0.000192629s
+attr mutable ""
+attr unit s
+par multicast_Network.Host_1.pppg$o[0].channel datarate 1e+06bps
+attr mutable ""
+attr unit bps
+par multicast_Network.Host_1.pppg$o[0].channel ber 0.0001
+attr mutable ""
+par multicast_Network.Host_1.pppg$o[0].channel per 0
+attr mutable ""
+par multicast_Network.router.pppg$o[1].channel typename "\"src.multicast_Network.ethernet\""
+par multicast_Network.router.pppg$o[1].channel disabled false
+attr mutable ""
+par multicast_Network.router.pppg$o[1].channel delay 0.000185994s
+attr mutable ""
+attr unit s
+par multicast_Network.router.pppg$o[1].channel datarate 1e+06bps
+attr mutable ""
+attr unit bps
+par multicast_Network.router.pppg$o[1].channel ber 0.0001
+attr mutable ""
+par multicast_Network.router.pppg$o[1].channel per 0
+attr mutable ""
+par multicast_Network.Host_0.pppg$i[0].channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ppp[0].phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.rtp.rtcpOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.rtcp.rtpOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par multicast_Network.Host_0.interfaceTable displayAddresses false
+par multicast_Network.Host_0.cb typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.cb displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.cb forwardServiceRegistration true
+par multicast_Network.Host_0.cb forwardProtocolRegistration true
+par multicast_Network.Host_0.bl typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.bl displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.bl forwardServiceRegistration true
+par multicast_Network.Host_0.bl forwardProtocolRegistration true
+par multicast_Network.Host_0.li typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.li displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.li forwardServiceRegistration true
+par multicast_Network.Host_0.li forwardProtocolRegistration true
+par multicast_Network.Host_0.lo[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.lo[0].lo.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.lo[0].lo typename "\"inet.linklayer.loopback.Loopback\""
+par multicast_Network.Host_0.lo[0].lo interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.lo[0].lo mtu 4470B
+attr unit B
+scalar multicast_Network.Host_0.lo[0].lo rcvdPkFromHl:count 1141
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.Host_0.lo[0].lo rcvdPkFromHl:sum(packetBytes) 2613364
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.Host_0.lo[0].lo passedUpPk:count 1141
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.Host_0.lo[0].lo passedUpPk:sum(packetBytes) 2613364
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+par multicast_Network.Host_0.lo[0] typename "\"inet.linklayer.loopback.LoopbackInterface\""
+par multicast_Network.Host_0.lo[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.Host_0.lo[0] recordPcap false
+par multicast_Network.Host_0.lo[0] numPcapRecorders 0
+par multicast_Network.Host_0.lo[0] interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+scalar multicast_Network.Host_0.lo[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.Host_0.lo[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.Host_0.lo[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.Host_0.lo[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.Host_0.ppp[0].phys$i.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ppp[0].ppp.phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ppp[0].ppp.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ppp[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ppp[0].queue typename "\"inet.queueing.queue.DropTailQueue\""
+par multicast_Network.Host_0.ppp[0].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par multicast_Network.Host_0.ppp[0].queue packetCapacity 10000
+par multicast_Network.Host_0.ppp[0].queue dataCapacity -1b
+attr unit b
+par multicast_Network.Host_0.ppp[0].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par multicast_Network.Host_0.ppp[0].queue comparatorClass "\"\""
+par multicast_Network.Host_0.ppp[0].queue bufferModule "\"\""
+scalar multicast_Network.Host_0.ppp[0].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar multicast_Network.Host_0.ppp[0].queue queueLength:max 3
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar multicast_Network.Host_0.ppp[0].queue queueLength:timeavg 0.065761144201631
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar multicast_Network.Host_0.ppp[0].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar multicast_Network.Host_0.ppp[0].queue queueBitLength:max 45728
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar multicast_Network.Host_0.ppp[0].queue queueBitLength:timeavg 305.78196911939
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic multicast_Network.Host_0.ppp[0].queue queueingTime:histogram
+field count 1144
+field mean 0.0044260458558907
+field stddev 0.011962862848896
+field min 0
+field max 0.05532
+field sum 5.063396459139
+field sqrsum 0.18598565497463
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1016
+bin	0.02	109
+bin	0.04	19
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar multicast_Network.Host_0.ppp[0].queue outgoingPackets:count 1144
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar multicast_Network.Host_0.ppp[0].queue outgoingPacketLengths:sum 20907680
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic multicast_Network.Host_0.ppp[0].queue outgoingPacketLengths:histogram
+field count 1144
+field mean 18275.944055944
+field stddev 11918.820729876
+field min 256
+field max 35680
+field sum 20907680
+field sqrsum 544480212736
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	6
+bin	500	13
+bin	1000	50
+bin	1500	0
+bin	2000	50
+bin	2500	0
+bin	3000	50
+bin	3500	0
+bin	4000	50
+bin	4500	0
+bin	5000	50
+bin	5500	0
+bin	6000	25
+bin	6500	0
+bin	7000	25
+bin	7500	0
+bin	8000	25
+bin	8500	0
+bin	9000	25
+bin	9500	0
+bin	10000	25
+bin	10500	0
+bin	11000	25
+bin	11500	0
+bin	12000	25
+bin	12500	0
+bin	13000	25
+bin	13500	0
+bin	14000	25
+bin	14500	0
+bin	15000	25
+bin	15500	0
+bin	16000	25
+bin	16500	0
+bin	17000	25
+bin	17500	0
+bin	18000	25
+bin	18500	0
+bin	19000	25
+bin	19500	0
+bin	20000	25
+bin	20500	0
+bin	21000	25
+bin	21500	0
+bin	22000	25
+bin	22500	0
+bin	23000	25
+bin	23500	0
+bin	24000	25
+bin	24500	0
+bin	25000	25
+bin	25500	0
+bin	26000	25
+bin	26500	0
+bin	27000	25
+bin	27500	0
+bin	28000	25
+bin	28500	0
+bin	29000	25
+bin	29500	0
+bin	30000	25
+bin	30500	0
+bin	31000	25
+bin	31500	0
+bin	32000	25
+bin	32500	0
+bin	33000	25
+bin	33500	0
+bin	34000	25
+bin	34500	0
+bin	35000	25
+bin	35500	125
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+bin	43500	0
+bin	44000	0
+bin	44500	0
+bin	45000	0
+statistic multicast_Network.Host_0.ppp[0].queue flowQueueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar multicast_Network.Host_0.ppp[0].queue incomingPackets:count 1144
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar multicast_Network.Host_0.ppp[0].queue incomingPacketLengths:sum 20907680
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic multicast_Network.Host_0.ppp[0].queue incomingPacketLengths:histogram
+field count 1144
+field mean 18275.944055944
+field stddev 11918.820729876
+field min 256
+field max 35680
+field sum 20907680
+field sqrsum 544480212736
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	6
+bin	500	13
+bin	1000	50
+bin	1500	0
+bin	2000	50
+bin	2500	0
+bin	3000	50
+bin	3500	0
+bin	4000	50
+bin	4500	0
+bin	5000	50
+bin	5500	0
+bin	6000	25
+bin	6500	0
+bin	7000	25
+bin	7500	0
+bin	8000	25
+bin	8500	0
+bin	9000	25
+bin	9500	0
+bin	10000	25
+bin	10500	0
+bin	11000	25
+bin	11500	0
+bin	12000	25
+bin	12500	0
+bin	13000	25
+bin	13500	0
+bin	14000	25
+bin	14500	0
+bin	15000	25
+bin	15500	0
+bin	16000	25
+bin	16500	0
+bin	17000	25
+bin	17500	0
+bin	18000	25
+bin	18500	0
+bin	19000	25
+bin	19500	0
+bin	20000	25
+bin	20500	0
+bin	21000	25
+bin	21500	0
+bin	22000	25
+bin	22500	0
+bin	23000	25
+bin	23500	0
+bin	24000	25
+bin	24500	0
+bin	25000	25
+bin	25500	0
+bin	26000	25
+bin	26500	0
+bin	27000	25
+bin	27500	0
+bin	28000	25
+bin	28500	0
+bin	29000	25
+bin	29500	0
+bin	30000	25
+bin	30500	0
+bin	31000	25
+bin	31500	0
+bin	32000	25
+bin	32500	0
+bin	33000	25
+bin	33500	0
+bin	34000	25
+bin	34500	0
+bin	35000	25
+bin	35500	125
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+bin	43500	0
+bin	44000	0
+bin	44500	0
+bin	45000	0
+scalar multicast_Network.Host_0.ppp[0].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar multicast_Network.Host_0.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par multicast_Network.Host_0.ppp[0].ppp typename "\"inet.linklayer.ppp.Ppp\""
+par multicast_Network.Host_0.ppp[0].ppp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ppp[0].ppp displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par multicast_Network.Host_0.ppp[0].ppp sendRawBytes false
+par multicast_Network.Host_0.ppp[0].ppp mtu 4470B
+attr unit B
+par multicast_Network.Host_0.ppp[0].ppp stopOperationExtraTime -1s
+attr unit s
+par multicast_Network.Host_0.ppp[0].ppp stopOperationTimeout 2s
+attr unit s
+scalar multicast_Network.Host_0.ppp[0].ppp txPk:count 1144
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar multicast_Network.Host_0.ppp[0].ppp txPk:sum(packetBytes) 2621468
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0].ppp rcvdPkFromHl:count 1144
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.Host_0.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 2613460
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0].ppp passedUpPk:count 177
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.Host_0.ppp[0].ppp passedUpPk:sum(packetBytes) 80906
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0].ppp packetDropIncorrectlyReceived:count 147
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar multicast_Network.Host_0.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 226647
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar multicast_Network.Host_0.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0].ppp rxPkOk:count 177
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar multicast_Network.Host_0.ppp[0].ppp rxPkOk:sum(packetBytes) 82145
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0].ppp transmissionState:timeavg 0.2723716960489
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+par multicast_Network.Host_0.ppp[0] typename "\"inet.linklayer.ppp.PppInterface\""
+par multicast_Network.Host_0.ppp[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.Host_0.ppp[0] recordPcap false
+par multicast_Network.Host_0.ppp[0] numPcapRecorders 0
+par multicast_Network.Host_0.ppp[0] interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+scalar multicast_Network.Host_0.ppp[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.Host_0.ppp[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.Host_0.ppp[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.Host_0.ppp[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.Host_0.ipv4.transportIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ipv4.up.out[0].channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ipv4.lp.out[2].channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ipv4.ifIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_0.ipv4.configurator typename "\"inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator\""
+par multicast_Network.Host_0.ipv4.configurator interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4.configurator routingTableModule "\"multicast_Network.Host_0.ipv4.routingTable\""
+par multicast_Network.Host_0.ipv4.configurator networkConfiguratorModule "\"configurator\""
+par multicast_Network.Host_0.ipv4.configurator configureRoutingTable true
+par multicast_Network.Host_0.ipv4.routingTable typename "\"inet.networklayer.ipv4.Ipv4RoutingTable\""
+par multicast_Network.Host_0.ipv4.routingTable interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4.routingTable routerId "\"auto\""
+par multicast_Network.Host_0.ipv4.routingTable netmaskRoutes "\"*\""
+par multicast_Network.Host_0.ipv4.routingTable forwarding false
+par multicast_Network.Host_0.ipv4.routingTable multicastForwarding false
+par multicast_Network.Host_0.ipv4.routingTable useAdminDist false
+par multicast_Network.Host_0.ipv4.routingTable routingFile "\"\""
+par multicast_Network.Host_0.ipv4.natTable typename "\"inet.networklayer.ipv4.Ipv4NatTable\""
+par multicast_Network.Host_0.ipv4.natTable networkProtocolModule "\"^.ip\""
+par multicast_Network.Host_0.ipv4.natTable config "<config/> at content:1"
+par multicast_Network.Host_0.ipv4.up typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.ipv4.up displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.ipv4.up forwardServiceRegistration true
+par multicast_Network.Host_0.ipv4.up forwardProtocolRegistration true
+par multicast_Network.Host_0.ipv4.igmp typename "\"inet.networklayer.ipv4.Igmpv2\""
+par multicast_Network.Host_0.ipv4.igmp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4.igmp routingTableModule "\"multicast_Network.Host_0.ipv4.routingTable\""
+par multicast_Network.Host_0.ipv4.igmp crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_0.ipv4.igmp enabled true
+par multicast_Network.Host_0.ipv4.igmp robustnessVariable 2
+par multicast_Network.Host_0.ipv4.igmp queryInterval 125s
+attr unit s
+par multicast_Network.Host_0.ipv4.igmp queryResponseInterval 10s
+attr unit s
+par multicast_Network.Host_0.ipv4.igmp groupMembershipInterval 260s
+attr unit s
+par multicast_Network.Host_0.ipv4.igmp otherQuerierPresentInterval 255s
+attr unit s
+par multicast_Network.Host_0.ipv4.igmp startupQueryInterval 31.25s
+attr unit s
+par multicast_Network.Host_0.ipv4.igmp startupQueryCount 2
+par multicast_Network.Host_0.ipv4.igmp lastMemberQueryInterval 1s
+attr unit s
+par multicast_Network.Host_0.ipv4.igmp lastMemberQueryCount 2
+par multicast_Network.Host_0.ipv4.igmp unsolicitedReportInterval 10s
+attr unit s
+par multicast_Network.Host_0.ipv4.icmp typename "\"inet.networklayer.ipv4.Icmp\""
+par multicast_Network.Host_0.ipv4.icmp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4.icmp routingTableModule "\"multicast_Network.Host_0.ipv4.routingTable\""
+par multicast_Network.Host_0.ipv4.icmp crcMode "\"declared\""
+attr enum declared,computed
+attr mutable ""
+par multicast_Network.Host_0.ipv4.icmp quoteLength 8B
+attr mutable ""
+attr unit B
+par multicast_Network.Host_0.ipv4.mp typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.ipv4.mp displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.ipv4.mp forwardServiceRegistration true
+par multicast_Network.Host_0.ipv4.mp forwardProtocolRegistration true
+par multicast_Network.Host_0.ipv4.ip typename "\"inet.networklayer.ipv4.Ipv4\""
+par multicast_Network.Host_0.ipv4.ip interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4.ip routingTableModule "\"multicast_Network.Host_0.ipv4.routingTable\""
+par multicast_Network.Host_0.ipv4.ip arpModule "\"multicast_Network.Host_0.ipv4.arp\""
+par multicast_Network.Host_0.ipv4.ip icmpModule "\"multicast_Network.Host_0.ipv4.icmp\""
+par multicast_Network.Host_0.ipv4.ip crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_0.ipv4.ip timeToLive 32
+par multicast_Network.Host_0.ipv4.ip multicastTimeToLive 32
+par multicast_Network.Host_0.ipv4.ip fragmentTimeout 60s
+attr unit s
+par multicast_Network.Host_0.ipv4.ip limitedBroadcast false
+par multicast_Network.Host_0.ipv4.ip directBroadcastInterfaces "\"\""
+scalar multicast_Network.Host_0.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar multicast_Network.Host_0.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar multicast_Network.Host_0.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar multicast_Network.Host_0.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar multicast_Network.Host_0.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar multicast_Network.Host_0.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar multicast_Network.Host_0.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+par multicast_Network.Host_0.ipv4.arp typename "\"inet.networklayer.arp.ipv4.Arp\""
+par multicast_Network.Host_0.ipv4.arp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4.arp routingTableModule "\"multicast_Network.Host_0.ipv4.routingTable\""
+par multicast_Network.Host_0.ipv4.arp retryTimeout 1s
+attr unit s
+par multicast_Network.Host_0.ipv4.arp retryCount 3
+par multicast_Network.Host_0.ipv4.arp cacheTimeout 120s
+attr unit s
+par multicast_Network.Host_0.ipv4.arp proxyArpInterfaces "\"\""
+scalar multicast_Network.Host_0.ipv4.arp arpReplySent:count 0
+attr recordingmode count
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar multicast_Network.Host_0.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.arp arpRequestSent:count 0
+attr recordingmode count
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar multicast_Network.Host_0.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar multicast_Network.Host_0.ipv4.arp arpResolutionFailed:count 0
+attr recordingmode count
+attr title "ARP failed resolutions, count"
+scalar multicast_Network.Host_0.ipv4.arp arpResolutionCompleted:count 0
+attr recordingmode count
+attr title "ARP completed resolutions, count"
+scalar multicast_Network.Host_0.ipv4.arp arpResolutionInitiated:count 0
+attr recordingmode count
+attr title "ARP initiated resolutions, count"
+par multicast_Network.Host_0.ipv4.lp typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.ipv4.lp displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.ipv4.lp forwardServiceRegistration true
+par multicast_Network.Host_0.ipv4.lp forwardProtocolRegistration true
+par multicast_Network.Host_0.ipv4 typename "\"inet.networklayer.ipv4.Ipv4NetworkLayer\""
+par multicast_Network.Host_0.ipv4 forwarding false
+par multicast_Network.Host_0.ipv4 multicastForwarding false
+par multicast_Network.Host_0.ipv4 interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.ipv4 displayStringTextFormat "\"%i\""
+par multicast_Network.Host_0.nl typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.nl displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.nl forwardServiceRegistration true
+par multicast_Network.Host_0.nl forwardProtocolRegistration true
+par multicast_Network.Host_0.udp typename "\"inet.transportlayer.udp.Udp\""
+par multicast_Network.Host_0.udp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.udp icmpModule "\"^.ipv4.icmp\""
+par multicast_Network.Host_0.udp icmpv6Module "\"^.ipv6.icmpv6\""
+par multicast_Network.Host_0.udp crcMode "\"declared\""
+attr enum disabled,declared,computed
+par multicast_Network.Host_0.udp defaultMulticastLoop true
+scalar multicast_Network.Host_0.udp packetReceived:count 1315
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar multicast_Network.Host_0.udp packetReceived:sum(packetBytes) 2667882
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar multicast_Network.Host_0.udp packetSent:count 1141
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar multicast_Network.Host_0.udp packetSent:sum(packetBytes) 2590544
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar multicast_Network.Host_0.udp passedUpPk:count 1315
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar multicast_Network.Host_0.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar multicast_Network.Host_0.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+par multicast_Network.Host_0.tcp typename "\"inet.transportlayer.tcp.Tcp\""
+par multicast_Network.Host_0.tcp crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_0.tcp advertisedWindow 7504
+par multicast_Network.Host_0.tcp delayedAcksEnabled false
+par multicast_Network.Host_0.tcp nagleEnabled true
+par multicast_Network.Host_0.tcp limitedTransmitEnabled false
+par multicast_Network.Host_0.tcp increasedIWEnabled false
+par multicast_Network.Host_0.tcp sackSupport false
+par multicast_Network.Host_0.tcp windowScalingSupport false
+par multicast_Network.Host_0.tcp windowScalingFactor -1
+par multicast_Network.Host_0.tcp timestampSupport false
+par multicast_Network.Host_0.tcp mss 536
+par multicast_Network.Host_0.tcp msl 120s
+attr unit s
+par multicast_Network.Host_0.tcp tcpAlgorithmClass "\"TcpReno\""
+par multicast_Network.Host_0.tcp useDataNotification false
+par multicast_Network.Host_0.tcp dupthresh 3
+par multicast_Network.Host_0.tcp initialSsthresh 4294967295
+par multicast_Network.Host_0.tcp stopOperationExtraTime 0s
+attr unit s
+par multicast_Network.Host_0.tcp stopOperationTimeout 2s
+attr unit s
+par multicast_Network.Host_0.tcp ecnWillingness false
+par multicast_Network.Host_0.tcp dctcpGamma 0.0625
+par multicast_Network.Host_0.tn typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.tn displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.tn forwardServiceRegistration true
+par multicast_Network.Host_0.tn forwardProtocolRegistration true
+par multicast_Network.Host_0.at typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_0.at displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_0.at forwardServiceRegistration true
+par multicast_Network.Host_0.at forwardProtocolRegistration true
+par multicast_Network.Host_0.rtpApp typename "\"inet.applications.rtpapp.RtpApplication\""
+par multicast_Network.Host_0.rtpApp commonName "\"???\""
+par multicast_Network.Host_0.rtpApp profileName "\"inet.transportlayer.rtp.RtpAvProfile\""
+par multicast_Network.Host_0.rtpApp bandwidth 8000
+par multicast_Network.Host_0.rtpApp destinationAddress "\"225.0.0.1\""
+par multicast_Network.Host_0.rtpApp portNumber 5004
+par multicast_Network.Host_0.rtpApp fileName "\"../data/mul_net_frame_increase.mpg.gdf\""
+par multicast_Network.Host_0.rtpApp payloadType 32
+par multicast_Network.Host_0.rtpApp sessionEnterDelay 10s
+attr unit s
+par multicast_Network.Host_0.rtpApp transmissionStartDelay 10s
+attr unit s
+par multicast_Network.Host_0.rtpApp transmissionStopDelay 40s
+attr unit s
+par multicast_Network.Host_0.rtpApp sessionLeaveDelay 10s
+attr unit s
+par multicast_Network.Host_0.rtp typename "\"inet.transportlayer.rtp.Rtp\""
+par multicast_Network.Host_0.rtp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+par multicast_Network.Host_0.rtp routingTableModule "\"^.ipv4.routingTable\""
+scalar multicast_Network.Host_0.rtp packetReceived:count 1285
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar multicast_Network.Host_0.rtp packetReceived:sum(packetBytes) 2655686
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic multicast_Network.Host_0.rtp endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+par multicast_Network.Host_0.rtcp typename "\"inet.transportlayer.rtp.Rtcp\""
+par multicast_Network.Host_0.rtcp interfaceTableModule "\"multicast_Network.Host_0.interfaceTable\""
+scalar multicast_Network.Host_0.rtcp packetReceived:count 30
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar multicast_Network.Host_0.rtcp packetReceived:sum(packetBytes) 1676
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic multicast_Network.Host_0.rtcp endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+par multicast_Network.Host_0 typename "\"inet.node.rtp.RtpHost\""
+par multicast_Network.Host_0 hasStatus false
+par multicast_Network.Host_0 osgModel "\"\""
+par multicast_Network.Host_0 osgModelColor "\"\""
+par multicast_Network.Host_0 canvasImage "\"\""
+par multicast_Network.Host_0 canvasImageColor "\"\""
+par multicast_Network.Host_0 recordPcap false
+par multicast_Network.Host_0 numPcapRecorders 0
+par multicast_Network.Host_0 numLoInterfaces 1
+par multicast_Network.Host_0 numWlanInterfaces 0
+par multicast_Network.Host_0 numEthInterfaces 0
+par multicast_Network.Host_0 numPppInterfaces 0
+par multicast_Network.Host_0 numTunInterfaces 0
+par multicast_Network.Host_0 numVirtInterfaces 0
+par multicast_Network.Host_0 fcsMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_0 hasIpv4 true
+par multicast_Network.Host_0 hasIpv6 false
+par multicast_Network.Host_0 hasGn false
+par multicast_Network.Host_0 forwarding false
+par multicast_Network.Host_0 multicastForwarding false
+par multicast_Network.Host_0 hasUdp true
+par multicast_Network.Host_0 hasTcp true
+par multicast_Network.Host_0 hasSctp false
+par multicast_Network.Host_0 numApps 0
+par multicast_Network.Host_0 profileName "\"inet.transportlayer.rtp.RtpAvProfile\""
+par multicast_Network.Host_0 destinationAddress "\"225.0.0.1\""
+par multicast_Network.Host_0 portNumber 5004
+par multicast_Network.Host_0 bandwidth 8000
+par multicast_Network.Host_0 fileName "\"../data/mul_net_frame_increase.mpg.gdf\""
+par multicast_Network.Host_0 payloadType 32
+par multicast_Network.Host_1.pppg$i[0].channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ppp[0].phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.rtp.rtcpOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.rtcp.rtpOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par multicast_Network.Host_1.interfaceTable displayAddresses false
+par multicast_Network.Host_1.cb typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.cb displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.cb forwardServiceRegistration true
+par multicast_Network.Host_1.cb forwardProtocolRegistration true
+par multicast_Network.Host_1.bl typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.bl displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.bl forwardServiceRegistration true
+par multicast_Network.Host_1.bl forwardProtocolRegistration true
+par multicast_Network.Host_1.li typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.li displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.li forwardServiceRegistration true
+par multicast_Network.Host_1.li forwardProtocolRegistration true
+par multicast_Network.Host_1.lo[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.lo[0].lo.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.lo[0].lo typename "\"inet.linklayer.loopback.Loopback\""
+par multicast_Network.Host_1.lo[0].lo interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.lo[0].lo mtu 4470B
+attr unit B
+scalar multicast_Network.Host_1.lo[0].lo rcvdPkFromHl:count 1141
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.Host_1.lo[0].lo rcvdPkFromHl:sum(packetBytes) 2613344
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.Host_1.lo[0].lo passedUpPk:count 1141
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.Host_1.lo[0].lo passedUpPk:sum(packetBytes) 2613344
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+par multicast_Network.Host_1.lo[0] typename "\"inet.linklayer.loopback.LoopbackInterface\""
+par multicast_Network.Host_1.lo[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.Host_1.lo[0] recordPcap false
+par multicast_Network.Host_1.lo[0] numPcapRecorders 0
+par multicast_Network.Host_1.lo[0] interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+scalar multicast_Network.Host_1.lo[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.Host_1.lo[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.Host_1.lo[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.Host_1.lo[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.Host_1.ppp[0].phys$i.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ppp[0].ppp.phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ppp[0].ppp.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ppp[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ppp[0].queue typename "\"inet.queueing.queue.DropTailQueue\""
+par multicast_Network.Host_1.ppp[0].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par multicast_Network.Host_1.ppp[0].queue packetCapacity 10000
+par multicast_Network.Host_1.ppp[0].queue dataCapacity -1b
+attr unit b
+par multicast_Network.Host_1.ppp[0].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par multicast_Network.Host_1.ppp[0].queue comparatorClass "\"\""
+par multicast_Network.Host_1.ppp[0].queue bufferModule "\"\""
+scalar multicast_Network.Host_1.ppp[0].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar multicast_Network.Host_1.ppp[0].queue queueLength:max 3
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar multicast_Network.Host_1.ppp[0].queue queueLength:timeavg 0.06523130101954
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar multicast_Network.Host_1.ppp[0].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar multicast_Network.Host_1.ppp[0].queue queueBitLength:max 45728
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar multicast_Network.Host_1.ppp[0].queue queueBitLength:timeavg 306.26871565218
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic multicast_Network.Host_1.ppp[0].queue queueingTime:histogram
+field count 1144
+field mean 0.004390384824611
+field stddev 0.01193534073598
+field min 0
+field max 0.05532
+field sum 5.022600239355
+field sqrsum 0.1848741936181
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	1017
+bin	0.02	108
+bin	0.04	19
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar multicast_Network.Host_1.ppp[0].queue outgoingPackets:count 1144
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar multicast_Network.Host_1.ppp[0].queue outgoingPacketLengths:sum 20907520
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic multicast_Network.Host_1.ppp[0].queue outgoingPacketLengths:histogram
+field count 1144
+field mean 18275.804195804
+field stddev 11919.029546631
+field min 256
+field max 35680
+field sum 20907520
+field sqrsum 544480054016
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	7
+bin	500	12
+bin	1000	50
+bin	1500	0
+bin	2000	50
+bin	2500	0
+bin	3000	50
+bin	3500	0
+bin	4000	50
+bin	4500	0
+bin	5000	50
+bin	5500	0
+bin	6000	25
+bin	6500	0
+bin	7000	25
+bin	7500	0
+bin	8000	25
+bin	8500	0
+bin	9000	25
+bin	9500	0
+bin	10000	25
+bin	10500	0
+bin	11000	25
+bin	11500	0
+bin	12000	25
+bin	12500	0
+bin	13000	25
+bin	13500	0
+bin	14000	25
+bin	14500	0
+bin	15000	25
+bin	15500	0
+bin	16000	25
+bin	16500	0
+bin	17000	25
+bin	17500	0
+bin	18000	25
+bin	18500	0
+bin	19000	25
+bin	19500	0
+bin	20000	25
+bin	20500	0
+bin	21000	25
+bin	21500	0
+bin	22000	25
+bin	22500	0
+bin	23000	25
+bin	23500	0
+bin	24000	25
+bin	24500	0
+bin	25000	25
+bin	25500	0
+bin	26000	25
+bin	26500	0
+bin	27000	25
+bin	27500	0
+bin	28000	25
+bin	28500	0
+bin	29000	25
+bin	29500	0
+bin	30000	25
+bin	30500	0
+bin	31000	25
+bin	31500	0
+bin	32000	25
+bin	32500	0
+bin	33000	25
+bin	33500	0
+bin	34000	25
+bin	34500	0
+bin	35000	25
+bin	35500	125
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+bin	43500	0
+bin	44000	0
+bin	44500	0
+bin	45000	0
+statistic multicast_Network.Host_1.ppp[0].queue flowQueueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar multicast_Network.Host_1.ppp[0].queue incomingPackets:count 1144
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar multicast_Network.Host_1.ppp[0].queue incomingPacketLengths:sum 20907520
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic multicast_Network.Host_1.ppp[0].queue incomingPacketLengths:histogram
+field count 1144
+field mean 18275.804195804
+field stddev 11919.029546631
+field min 256
+field max 35680
+field sum 20907520
+field sqrsum 544480054016
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	7
+bin	500	12
+bin	1000	50
+bin	1500	0
+bin	2000	50
+bin	2500	0
+bin	3000	50
+bin	3500	0
+bin	4000	50
+bin	4500	0
+bin	5000	50
+bin	5500	0
+bin	6000	25
+bin	6500	0
+bin	7000	25
+bin	7500	0
+bin	8000	25
+bin	8500	0
+bin	9000	25
+bin	9500	0
+bin	10000	25
+bin	10500	0
+bin	11000	25
+bin	11500	0
+bin	12000	25
+bin	12500	0
+bin	13000	25
+bin	13500	0
+bin	14000	25
+bin	14500	0
+bin	15000	25
+bin	15500	0
+bin	16000	25
+bin	16500	0
+bin	17000	25
+bin	17500	0
+bin	18000	25
+bin	18500	0
+bin	19000	25
+bin	19500	0
+bin	20000	25
+bin	20500	0
+bin	21000	25
+bin	21500	0
+bin	22000	25
+bin	22500	0
+bin	23000	25
+bin	23500	0
+bin	24000	25
+bin	24500	0
+bin	25000	25
+bin	25500	0
+bin	26000	25
+bin	26500	0
+bin	27000	25
+bin	27500	0
+bin	28000	25
+bin	28500	0
+bin	29000	25
+bin	29500	0
+bin	30000	25
+bin	30500	0
+bin	31000	25
+bin	31500	0
+bin	32000	25
+bin	32500	0
+bin	33000	25
+bin	33500	0
+bin	34000	25
+bin	34500	0
+bin	35000	25
+bin	35500	125
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+bin	43500	0
+bin	44000	0
+bin	44500	0
+bin	45000	0
+scalar multicast_Network.Host_1.ppp[0].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar multicast_Network.Host_1.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par multicast_Network.Host_1.ppp[0].ppp typename "\"inet.linklayer.ppp.Ppp\""
+par multicast_Network.Host_1.ppp[0].ppp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ppp[0].ppp displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par multicast_Network.Host_1.ppp[0].ppp sendRawBytes false
+par multicast_Network.Host_1.ppp[0].ppp mtu 4470B
+attr unit B
+par multicast_Network.Host_1.ppp[0].ppp stopOperationExtraTime -1s
+attr unit s
+par multicast_Network.Host_1.ppp[0].ppp stopOperationTimeout 2s
+attr unit s
+scalar multicast_Network.Host_1.ppp[0].ppp txPk:count 1144
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar multicast_Network.Host_1.ppp[0].ppp txPk:sum(packetBytes) 2621448
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0].ppp rcvdPkFromHl:count 1144
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.Host_1.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 2613440
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0].ppp passedUpPk:count 206
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.Host_1.ppp[0].ppp passedUpPk:sum(packetBytes) 115036
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0].ppp packetDropIncorrectlyReceived:count 142
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar multicast_Network.Host_1.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 245129
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar multicast_Network.Host_1.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0].ppp rxPkOk:count 206
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar multicast_Network.Host_1.ppp[0].ppp rxPkOk:sum(packetBytes) 116478
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0].ppp transmissionState:timeavg 0.27236961803997
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+par multicast_Network.Host_1.ppp[0] typename "\"inet.linklayer.ppp.PppInterface\""
+par multicast_Network.Host_1.ppp[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.Host_1.ppp[0] recordPcap false
+par multicast_Network.Host_1.ppp[0] numPcapRecorders 0
+par multicast_Network.Host_1.ppp[0] interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+scalar multicast_Network.Host_1.ppp[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.Host_1.ppp[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.Host_1.ppp[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.Host_1.ppp[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.Host_1.ipv4.transportIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ipv4.up.out[0].channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ipv4.lp.out[2].channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ipv4.ifIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.Host_1.ipv4.configurator typename "\"inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator\""
+par multicast_Network.Host_1.ipv4.configurator interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4.configurator routingTableModule "\"multicast_Network.Host_1.ipv4.routingTable\""
+par multicast_Network.Host_1.ipv4.configurator networkConfiguratorModule "\"configurator\""
+par multicast_Network.Host_1.ipv4.configurator configureRoutingTable true
+par multicast_Network.Host_1.ipv4.routingTable typename "\"inet.networklayer.ipv4.Ipv4RoutingTable\""
+par multicast_Network.Host_1.ipv4.routingTable interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4.routingTable routerId "\"auto\""
+par multicast_Network.Host_1.ipv4.routingTable netmaskRoutes "\"*\""
+par multicast_Network.Host_1.ipv4.routingTable forwarding false
+par multicast_Network.Host_1.ipv4.routingTable multicastForwarding false
+par multicast_Network.Host_1.ipv4.routingTable useAdminDist false
+par multicast_Network.Host_1.ipv4.routingTable routingFile "\"\""
+par multicast_Network.Host_1.ipv4.natTable typename "\"inet.networklayer.ipv4.Ipv4NatTable\""
+par multicast_Network.Host_1.ipv4.natTable networkProtocolModule "\"^.ip\""
+par multicast_Network.Host_1.ipv4.natTable config "<config/> at content:1"
+par multicast_Network.Host_1.ipv4.up typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.ipv4.up displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.ipv4.up forwardServiceRegistration true
+par multicast_Network.Host_1.ipv4.up forwardProtocolRegistration true
+par multicast_Network.Host_1.ipv4.igmp typename "\"inet.networklayer.ipv4.Igmpv2\""
+par multicast_Network.Host_1.ipv4.igmp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4.igmp routingTableModule "\"multicast_Network.Host_1.ipv4.routingTable\""
+par multicast_Network.Host_1.ipv4.igmp crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_1.ipv4.igmp enabled true
+par multicast_Network.Host_1.ipv4.igmp robustnessVariable 2
+par multicast_Network.Host_1.ipv4.igmp queryInterval 125s
+attr unit s
+par multicast_Network.Host_1.ipv4.igmp queryResponseInterval 10s
+attr unit s
+par multicast_Network.Host_1.ipv4.igmp groupMembershipInterval 260s
+attr unit s
+par multicast_Network.Host_1.ipv4.igmp otherQuerierPresentInterval 255s
+attr unit s
+par multicast_Network.Host_1.ipv4.igmp startupQueryInterval 31.25s
+attr unit s
+par multicast_Network.Host_1.ipv4.igmp startupQueryCount 2
+par multicast_Network.Host_1.ipv4.igmp lastMemberQueryInterval 1s
+attr unit s
+par multicast_Network.Host_1.ipv4.igmp lastMemberQueryCount 2
+par multicast_Network.Host_1.ipv4.igmp unsolicitedReportInterval 10s
+attr unit s
+par multicast_Network.Host_1.ipv4.icmp typename "\"inet.networklayer.ipv4.Icmp\""
+par multicast_Network.Host_1.ipv4.icmp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4.icmp routingTableModule "\"multicast_Network.Host_1.ipv4.routingTable\""
+par multicast_Network.Host_1.ipv4.icmp crcMode "\"declared\""
+attr enum declared,computed
+attr mutable ""
+par multicast_Network.Host_1.ipv4.icmp quoteLength 8B
+attr mutable ""
+attr unit B
+par multicast_Network.Host_1.ipv4.mp typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.ipv4.mp displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.ipv4.mp forwardServiceRegistration true
+par multicast_Network.Host_1.ipv4.mp forwardProtocolRegistration true
+par multicast_Network.Host_1.ipv4.ip typename "\"inet.networklayer.ipv4.Ipv4\""
+par multicast_Network.Host_1.ipv4.ip interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4.ip routingTableModule "\"multicast_Network.Host_1.ipv4.routingTable\""
+par multicast_Network.Host_1.ipv4.ip arpModule "\"multicast_Network.Host_1.ipv4.arp\""
+par multicast_Network.Host_1.ipv4.ip icmpModule "\"multicast_Network.Host_1.ipv4.icmp\""
+par multicast_Network.Host_1.ipv4.ip crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_1.ipv4.ip timeToLive 32
+par multicast_Network.Host_1.ipv4.ip multicastTimeToLive 32
+par multicast_Network.Host_1.ipv4.ip fragmentTimeout 60s
+attr unit s
+par multicast_Network.Host_1.ipv4.ip limitedBroadcast false
+par multicast_Network.Host_1.ipv4.ip directBroadcastInterfaces "\"\""
+scalar multicast_Network.Host_1.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar multicast_Network.Host_1.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar multicast_Network.Host_1.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar multicast_Network.Host_1.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar multicast_Network.Host_1.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar multicast_Network.Host_1.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar multicast_Network.Host_1.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+par multicast_Network.Host_1.ipv4.arp typename "\"inet.networklayer.arp.ipv4.Arp\""
+par multicast_Network.Host_1.ipv4.arp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4.arp routingTableModule "\"multicast_Network.Host_1.ipv4.routingTable\""
+par multicast_Network.Host_1.ipv4.arp retryTimeout 1s
+attr unit s
+par multicast_Network.Host_1.ipv4.arp retryCount 3
+par multicast_Network.Host_1.ipv4.arp cacheTimeout 120s
+attr unit s
+par multicast_Network.Host_1.ipv4.arp proxyArpInterfaces "\"\""
+scalar multicast_Network.Host_1.ipv4.arp arpReplySent:count 0
+attr recordingmode count
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar multicast_Network.Host_1.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.arp arpRequestSent:count 0
+attr recordingmode count
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar multicast_Network.Host_1.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar multicast_Network.Host_1.ipv4.arp arpResolutionFailed:count 0
+attr recordingmode count
+attr title "ARP failed resolutions, count"
+scalar multicast_Network.Host_1.ipv4.arp arpResolutionCompleted:count 0
+attr recordingmode count
+attr title "ARP completed resolutions, count"
+scalar multicast_Network.Host_1.ipv4.arp arpResolutionInitiated:count 0
+attr recordingmode count
+attr title "ARP initiated resolutions, count"
+par multicast_Network.Host_1.ipv4.lp typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.ipv4.lp displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.ipv4.lp forwardServiceRegistration true
+par multicast_Network.Host_1.ipv4.lp forwardProtocolRegistration true
+par multicast_Network.Host_1.ipv4 typename "\"inet.networklayer.ipv4.Ipv4NetworkLayer\""
+par multicast_Network.Host_1.ipv4 forwarding false
+par multicast_Network.Host_1.ipv4 multicastForwarding false
+par multicast_Network.Host_1.ipv4 interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.ipv4 displayStringTextFormat "\"%i\""
+par multicast_Network.Host_1.nl typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.nl displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.nl forwardServiceRegistration true
+par multicast_Network.Host_1.nl forwardProtocolRegistration true
+par multicast_Network.Host_1.udp typename "\"inet.transportlayer.udp.Udp\""
+par multicast_Network.Host_1.udp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.udp icmpModule "\"^.ipv4.icmp\""
+par multicast_Network.Host_1.udp icmpv6Module "\"^.ipv6.icmpv6\""
+par multicast_Network.Host_1.udp crcMode "\"declared\""
+attr enum disabled,declared,computed
+par multicast_Network.Host_1.udp defaultMulticastLoop true
+scalar multicast_Network.Host_1.udp packetReceived:count 1344
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar multicast_Network.Host_1.udp packetReceived:sum(packetBytes) 2701412
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+scalar multicast_Network.Host_1.udp packetSent:count 1141
+attr interpolationmode none
+attr recordingmode count
+attr source packetSent
+attr title "packets sent, count"
+scalar multicast_Network.Host_1.udp packetSent:sum(packetBytes) 2590524
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSent
+attr title "packets sent, sum(packetBytes)"
+scalar multicast_Network.Host_1.udp passedUpPk:count 1344
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed up, count"
+scalar multicast_Network.Host_1.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+scalar multicast_Network.Host_1.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+par multicast_Network.Host_1.tcp typename "\"inet.transportlayer.tcp.Tcp\""
+par multicast_Network.Host_1.tcp crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_1.tcp advertisedWindow 7504
+par multicast_Network.Host_1.tcp delayedAcksEnabled false
+par multicast_Network.Host_1.tcp nagleEnabled true
+par multicast_Network.Host_1.tcp limitedTransmitEnabled false
+par multicast_Network.Host_1.tcp increasedIWEnabled false
+par multicast_Network.Host_1.tcp sackSupport false
+par multicast_Network.Host_1.tcp windowScalingSupport false
+par multicast_Network.Host_1.tcp windowScalingFactor -1
+par multicast_Network.Host_1.tcp timestampSupport false
+par multicast_Network.Host_1.tcp mss 536
+par multicast_Network.Host_1.tcp msl 120s
+attr unit s
+par multicast_Network.Host_1.tcp tcpAlgorithmClass "\"TcpReno\""
+par multicast_Network.Host_1.tcp useDataNotification false
+par multicast_Network.Host_1.tcp dupthresh 3
+par multicast_Network.Host_1.tcp initialSsthresh 4294967295
+par multicast_Network.Host_1.tcp stopOperationExtraTime 0s
+attr unit s
+par multicast_Network.Host_1.tcp stopOperationTimeout 2s
+attr unit s
+par multicast_Network.Host_1.tcp ecnWillingness false
+par multicast_Network.Host_1.tcp dctcpGamma 0.0625
+par multicast_Network.Host_1.tn typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.tn displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.tn forwardServiceRegistration true
+par multicast_Network.Host_1.tn forwardProtocolRegistration true
+par multicast_Network.Host_1.at typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.Host_1.at displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.Host_1.at forwardServiceRegistration true
+par multicast_Network.Host_1.at forwardProtocolRegistration true
+par multicast_Network.Host_1.rtpApp typename "\"inet.applications.rtpapp.RtpApplication\""
+par multicast_Network.Host_1.rtpApp commonName "\"???\""
+par multicast_Network.Host_1.rtpApp profileName "\"inet.transportlayer.rtp.RtpAvProfile\""
+par multicast_Network.Host_1.rtpApp bandwidth 8000
+par multicast_Network.Host_1.rtpApp destinationAddress "\"225.0.0.1\""
+par multicast_Network.Host_1.rtpApp portNumber 5004
+par multicast_Network.Host_1.rtpApp fileName "\"../data/mul_net_frame_increase.mpg.gdf\""
+par multicast_Network.Host_1.rtpApp payloadType 32
+par multicast_Network.Host_1.rtpApp sessionEnterDelay 10s
+attr unit s
+par multicast_Network.Host_1.rtpApp transmissionStartDelay 10s
+attr unit s
+par multicast_Network.Host_1.rtpApp transmissionStopDelay 40s
+attr unit s
+par multicast_Network.Host_1.rtpApp sessionLeaveDelay 10s
+attr unit s
+par multicast_Network.Host_1.rtp typename "\"inet.transportlayer.rtp.Rtp\""
+par multicast_Network.Host_1.rtp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+par multicast_Network.Host_1.rtp routingTableModule "\"^.ipv4.routingTable\""
+scalar multicast_Network.Host_1.rtp packetReceived:count 1314
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar multicast_Network.Host_1.rtp packetReceived:sum(packetBytes) 2688904
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic multicast_Network.Host_1.rtp endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+par multicast_Network.Host_1.rtcp typename "\"inet.transportlayer.rtp.Rtcp\""
+par multicast_Network.Host_1.rtcp interfaceTableModule "\"multicast_Network.Host_1.interfaceTable\""
+scalar multicast_Network.Host_1.rtcp packetReceived:count 30
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar multicast_Network.Host_1.rtcp packetReceived:sum(packetBytes) 1756
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceived
+attr title "packets received, sum(packetBytes)"
+statistic multicast_Network.Host_1.rtcp endToEndDelay:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source dataAge(packetReceived)
+attr title "end-to-end delay"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+par multicast_Network.Host_1 typename "\"inet.node.rtp.RtpHost\""
+par multicast_Network.Host_1 hasStatus false
+par multicast_Network.Host_1 osgModel "\"\""
+par multicast_Network.Host_1 osgModelColor "\"\""
+par multicast_Network.Host_1 canvasImage "\"\""
+par multicast_Network.Host_1 canvasImageColor "\"\""
+par multicast_Network.Host_1 recordPcap false
+par multicast_Network.Host_1 numPcapRecorders 0
+par multicast_Network.Host_1 numLoInterfaces 1
+par multicast_Network.Host_1 numWlanInterfaces 0
+par multicast_Network.Host_1 numEthInterfaces 0
+par multicast_Network.Host_1 numPppInterfaces 0
+par multicast_Network.Host_1 numTunInterfaces 0
+par multicast_Network.Host_1 numVirtInterfaces 0
+par multicast_Network.Host_1 fcsMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.Host_1 hasIpv4 true
+par multicast_Network.Host_1 hasIpv6 false
+par multicast_Network.Host_1 hasGn false
+par multicast_Network.Host_1 forwarding false
+par multicast_Network.Host_1 multicastForwarding false
+par multicast_Network.Host_1 hasUdp true
+par multicast_Network.Host_1 hasTcp true
+par multicast_Network.Host_1 hasSctp false
+par multicast_Network.Host_1 numApps 0
+par multicast_Network.Host_1 profileName "\"inet.transportlayer.rtp.RtpAvProfile\""
+par multicast_Network.Host_1 destinationAddress "\"225.0.0.1\""
+par multicast_Network.Host_1 portNumber 5004
+par multicast_Network.Host_1 bandwidth 8000
+par multicast_Network.Host_1 fileName "\"../data/mul_net_frame_increase.mpg.gdf\""
+par multicast_Network.Host_1 payloadType 32
+par multicast_Network.router.pppg$i[0].channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[0].phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.pppg$i[1].channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[1].phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.interfaceTable typename "\"inet.networklayer.common.InterfaceTable\""
+par multicast_Network.router.interfaceTable displayAddresses false
+par multicast_Network.router.cb typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.cb displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.cb forwardServiceRegistration true
+par multicast_Network.router.cb forwardProtocolRegistration true
+par multicast_Network.router.bl typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.bl displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.bl forwardServiceRegistration true
+par multicast_Network.router.bl forwardProtocolRegistration true
+par multicast_Network.router.li typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.li displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.li forwardServiceRegistration true
+par multicast_Network.router.li forwardProtocolRegistration true
+par multicast_Network.router.lo[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.lo[0].lo.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.lo[0].lo typename "\"inet.linklayer.loopback.Loopback\""
+par multicast_Network.router.lo[0].lo interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.lo[0].lo mtu 4470B
+attr unit B
+scalar multicast_Network.router.lo[0].lo rcvdPkFromHl:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.router.lo[0].lo rcvdPkFromHl:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.router.lo[0].lo passedUpPk:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.router.lo[0].lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+par multicast_Network.router.lo[0] typename "\"inet.linklayer.loopback.LoopbackInterface\""
+par multicast_Network.router.lo[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.router.lo[0] recordPcap false
+par multicast_Network.router.lo[0] numPcapRecorders 0
+par multicast_Network.router.lo[0] interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+scalar multicast_Network.router.lo[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.router.lo[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.router.lo[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.router.lo[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.router.ppp[0].phys$i.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[0].ppp.phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[0].ppp.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[0].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[0].queue typename "\"inet.queueing.queue.DropTailQueue\""
+par multicast_Network.router.ppp[0].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par multicast_Network.router.ppp[0].queue packetCapacity 10000
+par multicast_Network.router.ppp[0].queue dataCapacity -1b
+attr unit b
+par multicast_Network.router.ppp[0].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par multicast_Network.router.ppp[0].queue comparatorClass "\"\""
+par multicast_Network.router.ppp[0].queue bufferModule "\"\""
+scalar multicast_Network.router.ppp[0].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar multicast_Network.router.ppp[0].queue queueLength:max 1
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar multicast_Network.router.ppp[0].queue queueLength:timeavg 0.0020457431117249
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar multicast_Network.router.ppp[0].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar multicast_Network.router.ppp[0].queue queueBitLength:max 3024
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar multicast_Network.router.ppp[0].queue queueBitLength:timeavg 3.6237629974905
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic multicast_Network.router.ppp[0].queue queueingTime:histogram
+field count 324
+field mean 0.00048615936920679
+field stddev 0.0037043518426001
+field min 0
+field max 0.033656
+field sum 0.157515635623
+field sqrsum 0.0045088555933838
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	317
+bin	0.0006	0
+bin	0.0012	0
+bin	0.0018	0
+bin	0.0024	0
+bin	0.003	1
+bin	0.0036	0
+bin	0.0042	0
+bin	0.0048	0
+bin	0.0054	0
+bin	0.006	0
+bin	0.0066	0
+bin	0.0072	0
+bin	0.0078	0
+bin	0.0084	1
+bin	0.009	0
+bin	0.0096	0
+bin	0.0102	0
+bin	0.0108	0
+bin	0.0114	0
+bin	0.012	0
+bin	0.0126	0
+bin	0.0132	0
+bin	0.0138	0
+bin	0.0144	0
+bin	0.015	0
+bin	0.0156	0
+bin	0.0162	1
+bin	0.0168	0
+bin	0.0174	0
+bin	0.018	0
+bin	0.0186	0
+bin	0.0192	0
+bin	0.0198	0
+bin	0.0204	0
+bin	0.021	0
+bin	0.0216	0
+bin	0.0222	0
+bin	0.0228	0
+bin	0.0234	0
+bin	0.024	0
+bin	0.0246	0
+bin	0.0252	0
+bin	0.0258	0
+bin	0.0264	0
+bin	0.027	0
+bin	0.0276	0
+bin	0.0282	1
+bin	0.0288	0
+bin	0.0294	0
+bin	0.03	0
+bin	0.0306	0
+bin	0.0312	0
+bin	0.0318	0
+bin	0.0324	1
+bin	0.033	0
+bin	0.0336	2
+bin	0.0342	0
+scalar multicast_Network.router.ppp[0].queue outgoingPackets:count 324
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar multicast_Network.router.ppp[0].queue outgoingPacketLengths:sum 2452192
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic multicast_Network.router.ppp[0].queue outgoingPacketLengths:histogram
+field count 324
+field mean 7568.4938271605
+field stddev 8046.0613876884
+field min 224
+field max 35680
+field sum 2452192
+field sqrsum 39470130560
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	7
+bin	500	11
+bin	1000	40
+bin	1500	0
+bin	2000	38
+bin	2500	0
+bin	3000	40
+bin	3500	0
+bin	4000	33
+bin	4500	0
+bin	5000	32
+bin	5500	0
+bin	6000	14
+bin	6500	0
+bin	7000	9
+bin	7500	0
+bin	8000	11
+bin	8500	0
+bin	9000	7
+bin	9500	0
+bin	10000	8
+bin	10500	0
+bin	11000	7
+bin	11500	0
+bin	12000	6
+bin	12500	0
+bin	13000	7
+bin	13500	0
+bin	14000	4
+bin	14500	0
+bin	15000	8
+bin	15500	0
+bin	16000	4
+bin	16500	0
+bin	17000	2
+bin	17500	0
+bin	18000	3
+bin	18500	0
+bin	19000	2
+bin	19500	0
+bin	20000	3
+bin	20500	0
+bin	21000	3
+bin	21500	0
+bin	22000	2
+bin	22500	0
+bin	23000	2
+bin	23500	0
+bin	24000	1
+bin	24500	0
+bin	25000	1
+bin	25500	0
+bin	26000	2
+bin	26500	0
+bin	27000	3
+bin	27500	0
+bin	28000	2
+bin	28500	0
+bin	29000	2
+bin	29500	0
+bin	30000	0
+bin	30500	0
+bin	31000	1
+bin	31500	0
+bin	32000	0
+bin	32500	0
+bin	33000	1
+bin	33500	0
+bin	34000	3
+bin	34500	0
+bin	35000	1
+bin	35500	4
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+bin	43500	0
+bin	44000	0
+bin	44500	0
+bin	45000	0
+statistic multicast_Network.router.ppp[0].queue flowQueueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar multicast_Network.router.ppp[0].queue incomingPackets:count 324
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar multicast_Network.router.ppp[0].queue incomingPacketLengths:sum 2452192
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic multicast_Network.router.ppp[0].queue incomingPacketLengths:histogram
+field count 324
+field mean 7568.4938271605
+field stddev 8046.0613876884
+field min 224
+field max 35680
+field sum 2452192
+field sqrsum 39470130560
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	7
+bin	500	11
+bin	1000	40
+bin	1500	0
+bin	2000	38
+bin	2500	0
+bin	3000	40
+bin	3500	0
+bin	4000	33
+bin	4500	0
+bin	5000	32
+bin	5500	0
+bin	6000	14
+bin	6500	0
+bin	7000	9
+bin	7500	0
+bin	8000	11
+bin	8500	0
+bin	9000	7
+bin	9500	0
+bin	10000	8
+bin	10500	0
+bin	11000	7
+bin	11500	0
+bin	12000	6
+bin	12500	0
+bin	13000	7
+bin	13500	0
+bin	14000	4
+bin	14500	0
+bin	15000	8
+bin	15500	0
+bin	16000	4
+bin	16500	0
+bin	17000	2
+bin	17500	0
+bin	18000	3
+bin	18500	0
+bin	19000	2
+bin	19500	0
+bin	20000	3
+bin	20500	0
+bin	21000	3
+bin	21500	0
+bin	22000	2
+bin	22500	0
+bin	23000	2
+bin	23500	0
+bin	24000	1
+bin	24500	0
+bin	25000	1
+bin	25500	0
+bin	26000	2
+bin	26500	0
+bin	27000	3
+bin	27500	0
+bin	28000	2
+bin	28500	0
+bin	29000	2
+bin	29500	0
+bin	30000	0
+bin	30500	0
+bin	31000	1
+bin	31500	0
+bin	32000	0
+bin	32500	0
+bin	33000	1
+bin	33500	0
+bin	34000	3
+bin	34500	0
+bin	35000	1
+bin	35500	4
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+bin	43500	0
+bin	44000	0
+bin	44500	0
+bin	45000	0
+scalar multicast_Network.router.ppp[0].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar multicast_Network.router.ppp[0].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par multicast_Network.router.ppp[0].ppp typename "\"inet.linklayer.ppp.Ppp\""
+par multicast_Network.router.ppp[0].ppp interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ppp[0].ppp displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par multicast_Network.router.ppp[0].ppp sendRawBytes false
+par multicast_Network.router.ppp[0].ppp mtu 4470B
+attr unit B
+par multicast_Network.router.ppp[0].ppp stopOperationExtraTime -1s
+attr unit s
+par multicast_Network.router.ppp[0].ppp stopOperationTimeout 2s
+attr unit s
+scalar multicast_Network.router.ppp[0].ppp txPk:count 324
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar multicast_Network.router.ppp[0].ppp txPk:sum(packetBytes) 308792
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0].ppp rcvdPkFromHl:count 324
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.router.ppp[0].ppp rcvdPkFromHl:sum(packetBytes) 306524
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0].ppp passedUpPk:count 348
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.router.ppp[0].ppp passedUpPk:sum(packetBytes) 359179
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0].ppp packetDropIncorrectlyReceived:count 796
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar multicast_Network.router.ppp[0].ppp packetDropIncorrectlyReceived:sum(packetBytes) 2259853
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar multicast_Network.router.ppp[0].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0].ppp rxPkOk:count 348
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar multicast_Network.router.ppp[0].ppp rxPkOk:sum(packetBytes) 361615
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0].ppp transmissionState:timeavg 0.032083626718439
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+par multicast_Network.router.ppp[0] typename "\"inet.linklayer.ppp.PppInterface\""
+par multicast_Network.router.ppp[0] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.router.ppp[0] recordPcap false
+par multicast_Network.router.ppp[0] numPcapRecorders 0
+par multicast_Network.router.ppp[0] interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+scalar multicast_Network.router.ppp[0] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.router.ppp[0] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.router.ppp[0] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.router.ppp[0] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.router.ppp[1].phys$i.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[1].ppp.phys$o.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[1].ppp.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[1].upperLayerIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ppp[1].queue typename "\"inet.queueing.queue.DropTailQueue\""
+par multicast_Network.router.ppp[1].queue displayStringTextFormat "\"contains %p pk (%l) pushed %u\\npulled %o removed %r dropped %d\""
+par multicast_Network.router.ppp[1].queue packetCapacity 10000
+par multicast_Network.router.ppp[1].queue dataCapacity -1b
+attr unit b
+par multicast_Network.router.ppp[1].queue dropperClass "\"inet::queueing::PacketAtCollectionEndDropper\""
+par multicast_Network.router.ppp[1].queue comparatorClass "\"\""
+par multicast_Network.router.ppp[1].queue bufferModule "\"\""
+scalar multicast_Network.router.ppp[1].queue queueLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, last"
+attr unit pk
+scalar multicast_Network.router.ppp[1].queue queueLength:max 1
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, max"
+attr unit pk
+scalar multicast_Network.router.ppp[1].queue queueLength:timeavg 0.0017105130530119
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length, timeavg"
+attr unit pk
+scalar multicast_Network.router.ppp[1].queue queueBitLength:last 0
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode last
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, last"
+attr unit b
+scalar multicast_Network.router.ppp[1].queue queueBitLength:max 5024
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode max
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, max"
+attr unit b
+scalar multicast_Network.router.ppp[1].queue queueBitLength:timeavg 6.3950043319153
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length, timeavg"
+attr unit b
+statistic multicast_Network.router.ppp[1].queue queueingTime:histogram
+field count 348
+field mean 0.00037845977011494
+field stddev 0.0032180342570652
+field min 0
+field max 0.030656
+field sum 0.131704
+field sqrsum 0.003643288
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+bin	-inf	0
+bin	0	342
+bin	0.00054	0
+bin	0.00108	0
+bin	0.00162	0
+bin	0.00216	1
+bin	0.0027	0
+bin	0.00324	0
+bin	0.00378	0
+bin	0.00432	0
+bin	0.00486	0
+bin	0.0054	0
+bin	0.00594	0
+bin	0.00648	0
+bin	0.00702	0
+bin	0.00756	0
+bin	0.0081	0
+bin	0.00864	0
+bin	0.00918	0
+bin	0.00972	0
+bin	0.01026	1
+bin	0.0108	0
+bin	0.01134	0
+bin	0.01188	0
+bin	0.01242	0
+bin	0.01296	0
+bin	0.0135	0
+bin	0.01404	0
+bin	0.01458	0
+bin	0.01512	0
+bin	0.01566	0
+bin	0.0162	0
+bin	0.01674	0
+bin	0.01728	0
+bin	0.01782	0
+bin	0.01836	0
+bin	0.0189	0
+bin	0.01944	0
+bin	0.01998	0
+bin	0.02052	0
+bin	0.02106	0
+bin	0.0216	0
+bin	0.02214	0
+bin	0.02268	0
+bin	0.02322	0
+bin	0.02376	0
+bin	0.0243	0
+bin	0.02484	0
+bin	0.02538	0
+bin	0.02592	0
+bin	0.02646	1
+bin	0.027	0
+bin	0.02754	0
+bin	0.02808	0
+bin	0.02862	0
+bin	0.02916	0
+bin	0.0297	0
+bin	0.03024	3
+bin	0.03078	0
+scalar multicast_Network.router.ppp[1].queue outgoingPackets:count 348
+attr recordingmode count
+attr source packetPulled
+attr title "outgoing packets, count"
+attr unit pk
+scalar multicast_Network.router.ppp[1].queue outgoingPacketLengths:sum 2873368
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths, sum"
+attr unit b
+statistic multicast_Network.router.ppp[1].queue outgoingPacketLengths:histogram
+field count 348
+field mean 8256.8045977011
+field stddev 8303.8315017902
+field min 224
+field max 35680
+field sum 2873368
+field sqrsum 47651743424
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	4
+bin	500	13
+bin	1000	46
+bin	1500	0
+bin	2000	40
+bin	2500	0
+bin	3000	37
+bin	3500	0
+bin	4000	29
+bin	4500	0
+bin	5000	28
+bin	5500	0
+bin	6000	17
+bin	6500	0
+bin	7000	11
+bin	7500	0
+bin	8000	9
+bin	8500	0
+bin	9000	10
+bin	9500	0
+bin	10000	5
+bin	10500	0
+bin	11000	11
+bin	11500	0
+bin	12000	7
+bin	12500	0
+bin	13000	7
+bin	13500	0
+bin	14000	7
+bin	14500	0
+bin	15000	7
+bin	15500	0
+bin	16000	6
+bin	16500	0
+bin	17000	9
+bin	17500	0
+bin	18000	3
+bin	18500	0
+bin	19000	4
+bin	19500	0
+bin	20000	4
+bin	20500	0
+bin	21000	4
+bin	21500	0
+bin	22000	4
+bin	22500	0
+bin	23000	2
+bin	23500	0
+bin	24000	2
+bin	24500	0
+bin	25000	3
+bin	25500	0
+bin	26000	1
+bin	26500	0
+bin	27000	2
+bin	27500	0
+bin	28000	2
+bin	28500	0
+bin	29000	1
+bin	29500	0
+bin	30000	2
+bin	30500	0
+bin	31000	1
+bin	31500	0
+bin	32000	2
+bin	32500	0
+bin	33000	3
+bin	33500	0
+bin	34000	2
+bin	34500	0
+bin	35000	0
+bin	35500	3
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+statistic multicast_Network.router.ppp[1].queue flowQueueingTime:histogram
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr recordingmode histogram
+attr source queueingTime(demuxFlow(packetPulled))
+attr title "flow queueing times"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar multicast_Network.router.ppp[1].queue incomingPackets:count 348
+attr recordingmode count
+attr source packetPushStarted
+attr title "incoming packets, count"
+attr unit pk
+scalar multicast_Network.router.ppp[1].queue incomingPacketLengths:sum 2873368
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths, sum"
+attr unit b
+statistic multicast_Network.router.ppp[1].queue incomingPacketLengths:histogram
+field count 348
+field mean 8256.8045977011
+field stddev 8303.8315017902
+field min 224
+field max 35680
+field sum 2873368
+field sqrsum 47651743424
+attr interpolationmode none
+attr recordingmode histogram
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+bin	-inf	0
+bin	0	4
+bin	500	13
+bin	1000	46
+bin	1500	0
+bin	2000	40
+bin	2500	0
+bin	3000	37
+bin	3500	0
+bin	4000	29
+bin	4500	0
+bin	5000	28
+bin	5500	0
+bin	6000	17
+bin	6500	0
+bin	7000	11
+bin	7500	0
+bin	8000	9
+bin	8500	0
+bin	9000	10
+bin	9500	0
+bin	10000	5
+bin	10500	0
+bin	11000	11
+bin	11500	0
+bin	12000	7
+bin	12500	0
+bin	13000	7
+bin	13500	0
+bin	14000	7
+bin	14500	0
+bin	15000	7
+bin	15500	0
+bin	16000	6
+bin	16500	0
+bin	17000	9
+bin	17500	0
+bin	18000	3
+bin	18500	0
+bin	19000	4
+bin	19500	0
+bin	20000	4
+bin	20500	0
+bin	21000	4
+bin	21500	0
+bin	22000	4
+bin	22500	0
+bin	23000	2
+bin	23500	0
+bin	24000	2
+bin	24500	0
+bin	25000	3
+bin	25500	0
+bin	26000	1
+bin	26500	0
+bin	27000	2
+bin	27500	0
+bin	28000	2
+bin	28500	0
+bin	29000	1
+bin	29500	0
+bin	30000	2
+bin	30500	0
+bin	31000	1
+bin	31500	0
+bin	32000	2
+bin	32500	0
+bin	33000	3
+bin	33500	0
+bin	34000	2
+bin	34500	0
+bin	35000	0
+bin	35500	3
+bin	36000	0
+bin	36500	0
+bin	37000	0
+bin	37500	0
+bin	38000	0
+bin	38500	0
+bin	39000	0
+bin	39500	0
+bin	40000	0
+bin	40500	0
+bin	41000	0
+bin	41500	0
+bin	42000	0
+bin	42500	0
+bin	43000	0
+scalar multicast_Network.router.ppp[1].queue droppedPacketsQueueOverflow:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsQueueOverflow(packetDropped)
+attr title "dropped packets: queue overflow, count"
+attr unit pk
+scalar multicast_Network.router.ppp[1].queue droppedPacketLengthsQueueOverflow:sum 0
+attr interpolationmode none
+attr recordingmode sum
+attr source packetLength(packetDropReasonIsQueueOverflow(packetDropped))
+attr title "dropped packet lengths: queue overflow, sum"
+attr unit b
+par multicast_Network.router.ppp[1].ppp typename "\"inet.linklayer.ppp.Ppp\""
+par multicast_Network.router.ppp[1].ppp interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ppp[1].ppp displayStringTextFormat "\"rate: %b\\nsent: %s, rcvd: %r\\nqueue: %q, drop: %d\""
+par multicast_Network.router.ppp[1].ppp sendRawBytes false
+par multicast_Network.router.ppp[1].ppp mtu 4470B
+attr unit B
+par multicast_Network.router.ppp[1].ppp stopOperationExtraTime -1s
+attr unit s
+par multicast_Network.router.ppp[1].ppp stopOperationTimeout 2s
+attr unit s
+scalar multicast_Network.router.ppp[1].ppp txPk:count 348
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToLower
+attr title "packets transmitted, count"
+scalar multicast_Network.router.ppp[1].ppp txPk:sum(packetBytes) 361607
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1].ppp rcvdPkFromHl:count 348
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar multicast_Network.router.ppp[1].ppp rcvdPkFromHl:sum(packetBytes) 359171
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1].ppp passedUpPk:count 324
+attr interpolationmode none
+attr recordingmode count
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar multicast_Network.router.ppp[1].ppp passedUpPk:sum(packetBytes) 306532
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1].ppp packetDropIncorrectlyReceived:count 820
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, count"
+scalar multicast_Network.router.ppp[1].ppp packetDropIncorrectlyReceived:sum(packetBytes) 2312648
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packet drop: incorrectly received, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1].ppp packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, count"
+scalar multicast_Network.router.ppp[1].ppp packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drop: interface down, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1].ppp rxPkOk:count 324
+attr interpolationmode none
+attr recordingmode count
+attr source rxPkOk
+attr title "packets received OK, count"
+scalar multicast_Network.router.ppp[1].ppp rxPkOk:sum(packetBytes) 308800
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1].ppp transmissionState:timeavg 0.037571128807659
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr source transmissionStateChanged
+attr title "tx state, timeavg"
+par multicast_Network.router.ppp[1] typename "\"inet.linklayer.ppp.PppInterface\""
+par multicast_Network.router.ppp[1] displayStringTextFormat "\"%a (%i)\\n%m\""
+par multicast_Network.router.ppp[1] recordPcap false
+par multicast_Network.router.ppp[1] numPcapRecorders 0
+par multicast_Network.router.ppp[1] interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+scalar multicast_Network.router.ppp[1] packetDropInterfaceDown:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, count"
+scalar multicast_Network.router.ppp[1] packetDropInterfaceDown:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsInterfaceDown(packetDropped)
+attr title "packet drops: interface down, sum(packetBytes)"
+scalar multicast_Network.router.ppp[1] packetDropNoCarrier:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, count"
+scalar multicast_Network.router.ppp[1] packetDropNoCarrier:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoCarrier(packetDropped)
+attr title "packet drops: no carrier, sum(packetBytes)"
+par multicast_Network.router.ipv4.transportIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ipv4.up.out[0].channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ipv4.lp.out[2].channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ipv4.ifIn.channel typename "\"ned.IdealChannel\""
+par multicast_Network.router.ipv4.configurator typename "\"inet.networklayer.configurator.ipv4.Ipv4NodeConfigurator\""
+par multicast_Network.router.ipv4.configurator interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4.configurator routingTableModule "\"multicast_Network.router.ipv4.routingTable\""
+par multicast_Network.router.ipv4.configurator networkConfiguratorModule "\"configurator\""
+par multicast_Network.router.ipv4.configurator configureRoutingTable true
+par multicast_Network.router.ipv4.routingTable typename "\"inet.networklayer.ipv4.Ipv4RoutingTable\""
+par multicast_Network.router.ipv4.routingTable interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4.routingTable routerId "\"auto\""
+par multicast_Network.router.ipv4.routingTable netmaskRoutes "\"*\""
+par multicast_Network.router.ipv4.routingTable forwarding true
+par multicast_Network.router.ipv4.routingTable multicastForwarding true
+par multicast_Network.router.ipv4.routingTable useAdminDist false
+par multicast_Network.router.ipv4.routingTable routingFile "\"\""
+par multicast_Network.router.ipv4.natTable typename "\"inet.networklayer.ipv4.Ipv4NatTable\""
+par multicast_Network.router.ipv4.natTable networkProtocolModule "\"^.ip\""
+par multicast_Network.router.ipv4.natTable config "<config/> at content:1"
+par multicast_Network.router.ipv4.up typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.ipv4.up displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.ipv4.up forwardServiceRegistration true
+par multicast_Network.router.ipv4.up forwardProtocolRegistration true
+par multicast_Network.router.ipv4.igmp typename "\"inet.networklayer.ipv4.Igmpv2\""
+par multicast_Network.router.ipv4.igmp interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4.igmp routingTableModule "\"multicast_Network.router.ipv4.routingTable\""
+par multicast_Network.router.ipv4.igmp crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.router.ipv4.igmp enabled true
+par multicast_Network.router.ipv4.igmp robustnessVariable 2
+par multicast_Network.router.ipv4.igmp queryInterval 125s
+attr unit s
+par multicast_Network.router.ipv4.igmp queryResponseInterval 10s
+attr unit s
+par multicast_Network.router.ipv4.igmp groupMembershipInterval 260s
+attr unit s
+par multicast_Network.router.ipv4.igmp otherQuerierPresentInterval 255s
+attr unit s
+par multicast_Network.router.ipv4.igmp startupQueryInterval 31.25s
+attr unit s
+par multicast_Network.router.ipv4.igmp startupQueryCount 2
+par multicast_Network.router.ipv4.igmp lastMemberQueryInterval 1s
+attr unit s
+par multicast_Network.router.ipv4.igmp lastMemberQueryCount 2
+par multicast_Network.router.ipv4.igmp unsolicitedReportInterval 10s
+attr unit s
+par multicast_Network.router.ipv4.icmp typename "\"inet.networklayer.ipv4.Icmp\""
+par multicast_Network.router.ipv4.icmp interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4.icmp routingTableModule "\"multicast_Network.router.ipv4.routingTable\""
+par multicast_Network.router.ipv4.icmp crcMode "\"declared\""
+attr enum declared,computed
+attr mutable ""
+par multicast_Network.router.ipv4.icmp quoteLength 8B
+attr mutable ""
+attr unit B
+par multicast_Network.router.ipv4.mp typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.ipv4.mp displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.ipv4.mp forwardServiceRegistration true
+par multicast_Network.router.ipv4.mp forwardProtocolRegistration true
+par multicast_Network.router.ipv4.ip typename "\"inet.networklayer.ipv4.Ipv4\""
+par multicast_Network.router.ipv4.ip interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4.ip routingTableModule "\"multicast_Network.router.ipv4.routingTable\""
+par multicast_Network.router.ipv4.ip arpModule "\"multicast_Network.router.ipv4.arp\""
+par multicast_Network.router.ipv4.ip icmpModule "\"multicast_Network.router.ipv4.icmp\""
+par multicast_Network.router.ipv4.ip crcMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.router.ipv4.ip timeToLive 32
+par multicast_Network.router.ipv4.ip multicastTimeToLive 32
+par multicast_Network.router.ipv4.ip fragmentTimeout 60s
+attr unit s
+par multicast_Network.router.ipv4.ip limitedBroadcast false
+par multicast_Network.router.ipv4.ip directBroadcastInterfaces "\"\""
+scalar multicast_Network.router.ipv4.ip packetDropAddressResolutionFailed:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, count"
+scalar multicast_Network.router.ipv4.ip packetDropAddressResolutionFailed:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.ip packetDropHopLimitReached:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, count"
+scalar multicast_Network.router.ipv4.ip packetDropHopLimitReached:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsHopLimitReached(packetDropped)
+attr title "packet drop: hop limit reached, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.ip packetDropForwardingDisabled:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, count"
+scalar multicast_Network.router.ipv4.ip packetDropForwardingDisabled:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsForwardingDisabled(packetDropped)
+attr title "packet drop: forwarding disabled, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.ip packetDropNoInterfaceFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, count"
+scalar multicast_Network.router.ipv4.ip packetDropNoInterfaceFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoInterfaceFound(packetDropped)
+attr title "packet drop: no interface found, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.ip packetDropNoRouteFound:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, count"
+scalar multicast_Network.router.ipv4.ip packetDropNoRouteFound:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsNoRouteFound(packetDropped)
+attr title "packet drop: no route found, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.ip packetDropUndefined:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, count"
+scalar multicast_Network.router.ipv4.ip packetDropUndefined:sum(packetBytes) 0
+attr interpolationmode none
+attr recordingmode sum(packetBytes)
+attr source packetDropReasonIsUndefined(packetDropped)
+attr title "packet drop: undefined, sum(packetBytes)"
+par multicast_Network.router.ipv4.arp typename "\"inet.networklayer.arp.ipv4.Arp\""
+par multicast_Network.router.ipv4.arp interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4.arp routingTableModule "\"multicast_Network.router.ipv4.routingTable\""
+par multicast_Network.router.ipv4.arp retryTimeout 1s
+attr unit s
+par multicast_Network.router.ipv4.arp retryCount 3
+par multicast_Network.router.ipv4.arp cacheTimeout 120s
+attr unit s
+par multicast_Network.router.ipv4.arp proxyArpInterfaces "\"*\""
+scalar multicast_Network.router.ipv4.arp arpReplySent:count 0
+attr recordingmode count
+attr source arpReplySent
+attr title "ARP replies sent, count"
+scalar multicast_Network.router.ipv4.arp arpReplySent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.arp arpRequestSent:count 0
+attr recordingmode count
+attr source arpRequestSent
+attr title "ARP request sent, count"
+scalar multicast_Network.router.ipv4.arp arpRequestSent:sum(packetBytes) 0
+attr recordingmode sum(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, sum(packetBytes)"
+scalar multicast_Network.router.ipv4.arp arpResolutionFailed:count 0
+attr recordingmode count
+attr title "ARP failed resolutions, count"
+scalar multicast_Network.router.ipv4.arp arpResolutionCompleted:count 0
+attr recordingmode count
+attr title "ARP completed resolutions, count"
+scalar multicast_Network.router.ipv4.arp arpResolutionInitiated:count 0
+attr recordingmode count
+attr title "ARP initiated resolutions, count"
+par multicast_Network.router.ipv4.lp typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.ipv4.lp displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.ipv4.lp forwardServiceRegistration true
+par multicast_Network.router.ipv4.lp forwardProtocolRegistration true
+par multicast_Network.router.ipv4 typename "\"inet.networklayer.ipv4.Ipv4NetworkLayer\""
+par multicast_Network.router.ipv4 forwarding true
+par multicast_Network.router.ipv4 multicastForwarding true
+par multicast_Network.router.ipv4 interfaceTableModule "\"multicast_Network.router.interfaceTable\""
+par multicast_Network.router.ipv4 displayStringTextFormat "\"%i\""
+par multicast_Network.router.nl typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.nl displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.nl forwardServiceRegistration true
+par multicast_Network.router.nl forwardProtocolRegistration true
+par multicast_Network.router.tn typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.tn displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.tn forwardServiceRegistration true
+par multicast_Network.router.tn forwardProtocolRegistration true
+par multicast_Network.router.at typename "\"inet.common.MessageDispatcher\""
+par multicast_Network.router.at displayStringTextFormat "\"processed %p pk (%l)\""
+par multicast_Network.router.at forwardServiceRegistration true
+par multicast_Network.router.at forwardProtocolRegistration true
+par multicast_Network.router typename "\"inet.node.inet.Router\""
+par multicast_Network.router hasStatus false
+par multicast_Network.router osgModel "\"\""
+par multicast_Network.router osgModelColor "\"\""
+par multicast_Network.router canvasImage "\"\""
+par multicast_Network.router canvasImageColor "\"\""
+par multicast_Network.router recordPcap false
+par multicast_Network.router numPcapRecorders 0
+par multicast_Network.router numLoInterfaces 1
+par multicast_Network.router numWlanInterfaces 0
+par multicast_Network.router numEthInterfaces 0
+par multicast_Network.router numPppInterfaces 0
+par multicast_Network.router numTunInterfaces 0
+par multicast_Network.router numVirtInterfaces 0
+par multicast_Network.router fcsMode "\"declared\""
+attr enum declared,computed
+par multicast_Network.router hasIpv4 true
+par multicast_Network.router hasIpv6 false
+par multicast_Network.router hasGn false
+par multicast_Network.router forwarding true
+par multicast_Network.router multicastForwarding true
+par multicast_Network.router hasUdp false
+par multicast_Network.router hasTcp false
+par multicast_Network.router hasSctp false
+par multicast_Network.router numApps 0
+par multicast_Network.router hasEigrp false
+par multicast_Network.router hasOspf false
+par multicast_Network.router hasRip false
+par multicast_Network.router hasBgp false
+par multicast_Network.router hasPim false
+par multicast_Network.router hasDhcp false
+par multicast_Network.configurator typename "\"inet.networklayer.configurator.ipv4.Ipv4NetworkConfigurator\""
+par multicast_Network.configurator minLinkWeight 0.001
+par multicast_Network.configurator configureIsolatedNetworksSeparatly false
+par multicast_Network.configurator config "<config>...</config> at content:1"
+par multicast_Network.configurator assignAddresses true
+par multicast_Network.configurator assignUniqueAddresses true
+par multicast_Network.configurator assignDisjunctSubnetAddresses true
+par multicast_Network.configurator addStaticRoutes true
+par multicast_Network.configurator addDefaultRoutes true
+par multicast_Network.configurator addSubnetRoutes true
+par multicast_Network.configurator addDirectRoutes true
+par multicast_Network.configurator optimizeRoutes true
+par multicast_Network.configurator dumpTopology false
+par multicast_Network.configurator dumpLinks false
+par multicast_Network.configurator dumpAddresses false
+par multicast_Network.configurator dumpRoutes false
+par multicast_Network.configurator dumpConfig "\"\""
+par multicast_Network typename "\"src.multicast_Network\""
+
